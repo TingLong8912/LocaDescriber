@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "name": "9723_topoframe",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "9723" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [121.5, 25.0],
+            [122.0, 25.0],
+            [122.0, 25.5],
+            [121.5, 25.5],
+            [121.5, 25.0]
+          ]
+        ]
+      }
+    }
+  ]
+}
