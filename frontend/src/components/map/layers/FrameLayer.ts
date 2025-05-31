@@ -17,7 +17,7 @@ export const createFrameLayer = (map: Map) => {
     source,
     style: new Style({
       stroke: new Stroke({
-        color: "red",
+        color: "rgba(255,99,92,255)",
         width: 2,
       }),
     }),

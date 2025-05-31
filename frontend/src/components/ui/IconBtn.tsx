@@ -18,7 +18,7 @@ export function IconBtn({ icon, hoverIcon, className, onClick }: IconBtnProps) {
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
       onClick={onClick}
-      className={`cursor-pointer inline-flex items-center justify-center rounded-xs p-1 border-border ${className}`}
+      className={`cursor-pointer inline-flex items-center justify-center rounded-md p-1 border-border ${className}`}
       whileTap={{ scale: 0.95 }}
       initial={false}
       animate={{ scale: hovered ? 1.1 : 1 }}

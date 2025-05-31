@@ -5,7 +5,6 @@ export default function MapPage() {
   return (
     <>
       <MapViewer />
-      <DrawTool />
     </>
   );
 }

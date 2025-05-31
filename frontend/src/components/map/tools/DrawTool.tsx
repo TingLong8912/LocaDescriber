@@ -1,25 +1,34 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Draw } from "ol/interaction";
 import { createBox } from "ol/interaction/Draw";
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
 import { useMapContext } from "@/context/MapContext";
 import { IconBtn } from "@/components/ui/IconBtn";
-import { FileInput, MapPin, Spline, SquareMousePointer, SquareRoundCorner } from "lucide-react";
+import { FileInput, MapPin, Pen, Spline, SquareMousePointer, SquareRoundCorner, X } from "lucide-react";
+import * as Select from "@radix-ui/react-select";
 
 // OpenLayers does not export GeometryType, so define it manually
-type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box";
+type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "None";
 
 const drawSource = new VectorSource();
 const drawLayer = new VectorLayer({
   source: drawSource,
 });
 
+const geometryOptions = [
+  { id: "Point", label: "Point", icon: <MapPin /> },
+  { id: "LineString", label: "Line", icon: <Spline /> },
+  { id: "Polygon", label: "Polygon", icon: <SquareRoundCorner /> },
+  { id: "None", label: "Cancel", icon: <X /> },
+];
+
 export const DrawTool = () => {
   const { map } = useMapContext();
-  const [drawType, setDrawType] = useState<GeometryType | "None">("None");
+  const [drawType, setDrawType] = useState<GeometryType>("None");
 
   useEffect(() => {
     if (!map) return;
@@ -45,14 +54,37 @@ export const DrawTool = () => {
     };
   }, [map, drawType]);
 
+  const selected = geometryOptions.find((opt) => opt.id === drawType);
+
+  const cycleDrawType = () => {
+    const currentIndex = geometryOptions.findIndex((opt) => opt.id === drawType);
+    const nextIndex = (currentIndex + 1) % geometryOptions.length;
+    const nextType = geometryOptions[nextIndex].id as GeometryType;
+    setDrawType(nextType);
+  };
+
   return (
-    <div className="h-auto w-fit px-3 py-1 space-x-4 bg-card text-foreground border border-border rounded-md relative bottom-15 left-1/2 -translate-x-1/2">
-      <IconBtn icon={<MapPin />} hoverIcon={<MapPin />} onClick={() => setDrawType("Point")}></IconBtn>
-      <IconBtn icon={<Spline />} hoverIcon={<Spline />} onClick={() => setDrawType("LineString")}></IconBtn>
-      <IconBtn icon={<SquareRoundCorner />} hoverIcon={<SquareRoundCorner />} onClick={() => setDrawType("Polygon")}></IconBtn>    
-      <IconBtn icon={<FileInput />} hoverIcon={<FileInput />}></IconBtn>    
-      {/* <button onClick={() => setDrawType("Box")}>矩形</button>
-      <button onClick={() => setDrawType("None")}>清除繪製</button> */}
+    <div className="w-fit h-full flex items-center space-x-2 text-foreground">
+      <Select.Root>
+        <Select.Trigger
+          onClick={cycleDrawType}
+          className="bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md"
+        >
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={drawType}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+            >
+              {selected?.icon}
+            </motion.span>
+          </AnimatePresence>
+        </Select.Trigger>
+      </Select.Root>
+
+      <IconBtn icon={<FileInput />} hoverIcon={<FileInput />} />
     </div>
   );
 };
