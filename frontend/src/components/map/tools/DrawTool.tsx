@@ -26,7 +26,7 @@ const geometryOptions = [
   { id: "None", label: "Cancel", icon: <X /> },
 ];
 
-export const DrawTool = () => {
+export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void }) => {
   const { map } = useMapContext();
   const [drawType, setDrawType] = useState<GeometryType>("None");
 
@@ -36,14 +36,22 @@ export const DrawTool = () => {
     if (!map.getLayers().getArray().includes(drawLayer)) {
       map.addLayer(drawLayer);
     }
-
+    
     let draw: Draw | null = null;
 
     if (drawType !== "None") {
+      drawSource.clear();
       draw = new Draw({
         source: drawSource,
-        type: drawType === "Box" ? "Circle" : drawType, // Box 要透過 geometryFunction 模擬
+        type: drawType === "Box" ? "Circle" : drawType, 
         geometryFunction: drawType === "Box" ? createBox() : undefined,
+      });
+
+      draw.on('drawend', (event) => {
+        const geometry = event.feature.getGeometry();
+        if (onDrawEnd) {
+          onDrawEnd(geometry);
+        }
       });
 
       map.addInteraction(draw);
@@ -52,7 +60,7 @@ export const DrawTool = () => {
     return () => {
       if (draw) map.removeInteraction(draw);
     };
-  }, [map, drawType]);
+  }, [map, drawType, onDrawEnd]);
 
   const selected = geometryOptions.find((opt) => opt.id === drawType);
 

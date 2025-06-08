@@ -50,6 +50,9 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
         <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/map')}>
           Map
         </li>
+        <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/ontology')}>
+          Ontology
+        </li>
       </ul>
       <button onClick={onClose} className="mt-4 text-sm underline">
         Close

@@ -31,6 +31,7 @@ export function IconBtn({ icon, hoverIcon, className, onClick }: IconBtnProps) {
           animate={{ opacity: 1, rotate: 0 }}
           exit={{ opacity: 0, rotate: 10 }}
           transition={{ duration: 0.2 }}
+          style={{ pointerEvents: 'none' }}
         >
           {hovered ? hoverIcon : icon}
         </motion.div>

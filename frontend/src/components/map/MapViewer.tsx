@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { fromLonLat } from "ol/proj";
+import { useEffect, useRef, useState } from "react";
+import { fromLonLat, toLonLat } from "ol/proj";
 import { useMapContext } from "@/context/MapContext";
 import Map from "ol/Map";
 import View from "ol/View";
@@ -15,8 +15,10 @@ import VectorLayer from "ol/layer/Vector";
 import { Vector as VectorSource } from "ol/source";
 import { Style, Stroke } from "ol/style";
 import { DrawTool } from "./tools/DrawTool";
+import { getLocationDescription } from "@/lib/api";
 
 export const MapViewer = () => {
+  const [context, setContext] = useState<string>("Traffic"); // Example context state
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapObjectRef = useRef<Map | null>(null);
   const { setMap } = useMapContext();
@@ -71,6 +73,18 @@ export const MapViewer = () => {
     };
   }, []);
 
+  const handleDrawEnd = async (geometry: any) => {
+    console.log("Draw finished:", geometry);
+    console.log("Context:", context);
+
+    if (geometry.getType() === "Point") {
+      const coordinate = geometry.getCoordinates();
+      const [lat, lon] = toLonLat(coordinate);
+      const res = await getLocationDescription(lon, lat, context);
+      console.log("Location description:", res);
+    }
+  };
+
   return (
     <>
       <div
@@ -80,14 +94,16 @@ export const MapViewer = () => {
       />
       <ToolContainer>
         <ContextLayerSwitcher
+          context={context}
+          setContext={setContext}
           onChangeLayer={(layerId) => {
             Object.entries(layerRefs.current).forEach(([key, layer]) => {
               layer.setVisible(key === layerId);
             });
           }}
         />
-        <DrawTool />
-        <PopupTool />
+        <DrawTool onDrawEnd={handleDrawEnd} />
+        {/* <PopupTool /> */}
       </ToolContainer>
     </>
   );

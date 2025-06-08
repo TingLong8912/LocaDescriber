@@ -12,14 +12,25 @@ const vectorLayers = [
   { id: "Tsunami", icon: <Waves />, label: "Tsunami" },
 ];
 
-export default function ContextLayerSwitcher({ onChangeLayer }: { onChangeLayer: (layerId: string) => void }) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+interface ContextLayerSwitcherProps {
+  context: string;
+  setContext: React.Dispatch<React.SetStateAction<string>>;
+  onChangeLayer: (layerId: string) => void;
+}
+
+export default function ContextLayerSwitcher({ context, setContext, onChangeLayer }: ContextLayerSwitcherProps) {
+  const [selectedIndex, setSelectedIndex] = useState(() => {
+    const initialIndex = vectorLayers.findIndex((layer) => layer.id === context);
+    return initialIndex !== -1 ? initialIndex : 0;
+  });
   const selectedIcon = vectorLayers[selectedIndex].icon;
 
   const cycleLayer = () => {
     const nextIndex = (selectedIndex + 1) % vectorLayers.length;
     setSelectedIndex(nextIndex);
-    onChangeLayer(vectorLayers[nextIndex].id);
+    const nextContext = vectorLayers[nextIndex].id;
+    setContext(nextContext);
+    onChangeLayer(nextContext);
   };
 
   return (

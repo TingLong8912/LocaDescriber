@@ -15,7 +15,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
   const showPanel = pathname !== '/home';
 
   return (
-    <div className="relative h-full w-full bg-background text-foreground min-h-screen overflow-hidden">
+    <div className="relative h-full w-full min-h-screen overflow-hidden">
       <AnimatePresence initial={false}>
         <Sidebar key="sidebar" isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         {showPanel && (
@@ -38,10 +38,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
           isEventPanelOpen={isEventPanelOpen}
           setIsEventPanelOpen={setIsEventPanelOpen}
         />
-        <main className="flex-grow w-full p-6 overflow-auto">
-          <div className="h-full w-full bg-gray-200 rounded-md overflow-hidden">
-            {children}
-          </div>
+        <main className="flex-grow h-full w-full overflow-auto">
+          {children}
         </main>
       </div>
     </div>

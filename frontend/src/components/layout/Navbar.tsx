@@ -21,14 +21,12 @@ export function Navbar({
   return (
     <header className="h-16 w-full border-b border-border flex items-center px-4 justify-between bg-background">
       <div className="flex items-center space-x-2">
-        {!isSidebarOpen && (
-          <IconBtn
-            icon={<PanelLeftDashed size={20} />}
-            hoverIcon={<PanelLeftOpen size={20} />}
-            onClick={() => setIsSidebarOpen(true)}
-          />
-        )}
-        <h1 className="text-lg font-semibold">LocaDescriber</h1>
+        <IconBtn
+          icon={<PanelLeftDashed size={20} />}
+          hoverIcon={<PanelLeftOpen size={20} />}
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        />
+        <img src="/logo.svg" alt="LocaDescriber Logo" className="h-8" />
       </div>
       <div>
         {pathname !== '/home' && (

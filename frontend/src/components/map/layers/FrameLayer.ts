@@ -25,7 +25,7 @@ export const createFrameLayer = (map: Map) => {
 
   if (source.getFeatures().length > 0) {
     const extent = source.getExtent();
-    map.getView().fit(extent, { padding: [50, 50, 50, 50], duration: 1500 });
+    map.getView().fit(extent, { padding: [50, 50, 50, 50], duration: 0 });
   }
 
   return layer;
