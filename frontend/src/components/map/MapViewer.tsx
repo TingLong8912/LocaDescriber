@@ -16,13 +16,37 @@ import { Vector as VectorSource } from "ol/source";
 import { Style, Stroke } from "ol/style";
 import { DrawTool } from "./tools/DrawTool";
 import { getLocationDescription } from "@/lib/api";
+import { EyeOff } from "lucide-react";
+import { TooltipDemo } from "@/components/ui/Tooltips";
+import { createInputLayer } from "./layers/InputLayer";
 
-export const MapViewer = () => {
+export const MapViewer = ({ featureId }: { featureId?: string }) => {
   const [context, setContext] = useState<string>("Traffic"); // Example context state
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapObjectRef = useRef<Map | null>(null);
   const { setMap } = useMapContext();
   const layerRefs = useRef<{ [key: string]: VectorLayer<any> }>({});
+
+  useEffect(() => {
+    if (!featureId) return;
+
+    try {
+      const geojson = require(`@/data/geojson/${featureId}.json`);
+      console.log("MapViewer mounted with featureId:", featureId);
+      console.log("GeoJSON data:", geojson);
+      console.log("Current context:", context);
+
+      // const fetchFeatureDescription = async () => {
+      //   const lon = 121;
+      //   const lat = 24;
+      //   const res = await getLocationDescription(geojson, context);
+      //   console.log("FeatureId-based description:", res);
+      // };
+      // fetchFeatureDescription();
+    } catch (error) {
+      console.error(`Error loading GeoJSON for featureId "${featureId}":`, error);
+    }
+  }, [featureId, context]);
 
   useEffect(() => {
     if (mapRef.current && !mapObjectRef.current) {
@@ -36,32 +60,45 @@ export const MapViewer = () => {
         }),
       });
 
+      // Layers
+      // Frame Layer
       const frameLayer = createFrameLayer(map);
       map.addLayer(frameLayer);
 
-      const roadLayer = new VectorLayer({
-        source: new VectorSource(),
-        style: new Style({ stroke: new Stroke({ color: "red", width: 2 }) }),
-        visible: false,
-      });
-      const buildingLayer = new VectorLayer({
-        source: new VectorSource(),
-        style: new Style({ stroke: new Stroke({ color: "blue", width: 2 }) }),
-        visible: false,
-      });
-      const landmarkLayer = new VectorLayer({
-        source: new VectorSource(),
-        style: new Style({ stroke: new Stroke({ color: "green", width: 2 }) }),
-        visible: false,
-      });
+      // Input Vector Layers
+      if (featureId) {
+        try {
+          const inputLayer = createInputLayer(map, require(`@/data/geojson/${featureId}.json`));
+          map.addLayer(inputLayer);
+        }
+        catch (error) {
+          console.error(`Error loading input layer for featureId "${featureId}":`, error);
+        }
+      }
 
-      map.addLayer(roadLayer);
-      map.addLayer(buildingLayer);
-      map.addLayer(landmarkLayer);
+      // const roadLayer = new VectorLayer({
+      //   source: new VectorSource(),
+      //   style: new Style({ stroke: new Stroke({ color: "red", width: 2 }) }),
+      //   visible: false,
+      // });
+      // const buildingLayer = new VectorLayer({
+      //   source: new VectorSource(),
+      //   style: new Style({ stroke: new Stroke({ color: "blue", width: 2 }) }),
+      //   visible: false,
+      // });
+      // const landmarkLayer = new VectorLayer({
+      //   source: new VectorSource(),
+      //   style: new Style({ stroke: new Stroke({ color: "green", width: 2 }) }),
+      //   visible: false,
+      // });
 
-      layerRefs.current["roads"] = roadLayer;
-      layerRefs.current["buildings"] = buildingLayer;
-      layerRefs.current["landmarks"] = landmarkLayer;
+      // map.addLayer(roadLayer);
+      // map.addLayer(buildingLayer);
+      // map.addLayer(landmarkLayer);
+
+      // layerRefs.current["roads"] = roadLayer;
+      // layerRefs.current["buildings"] = buildingLayer;
+      // layerRefs.current["landmarks"] = landmarkLayer;
 
       mapObjectRef.current = map;
       setMap(map);
@@ -90,19 +127,33 @@ export const MapViewer = () => {
       <div
         ref={mapRef}
         style={{ width: "100%", height: "100%", minHeight: "400px" }}
-        className="border overflow-hidden"
+        className={`w-full h-full overflow-hidden ${featureId ? 'border-4 border-primary-a shadow-lg' : ''}`}
       />
+
       <ToolContainer>
-        <ContextLayerSwitcher
-          context={context}
-          setContext={setContext}
-          onChangeLayer={(layerId) => {
-            Object.entries(layerRefs.current).forEach(([key, layer]) => {
-              layer.setVisible(key === layerId);
-            });
-          }}
-        />
-        <DrawTool onDrawEnd={handleDrawEnd} />
+        {featureId ? (
+          <div className="flex items-center justify-between">
+            <span className="mr-2 px-4 py-2 rounded-md bg-primary-a text-primary-foreground">View Only</span>
+            <TooltipDemo tooltip="Exit Preview Mode">
+              <a href="/map">
+                <EyeOff />
+              </a>
+            </TooltipDemo>
+          </div>
+        ) : (
+          <>
+            <ContextLayerSwitcher
+              context={context}
+              setContext={setContext}
+              onChangeLayer={(layerId) => {
+                Object.entries(layerRefs.current).forEach(([key, layer]) => {
+                  layer.setVisible(key === layerId);
+                });
+              }}
+            />
+            <DrawTool onDrawEnd={handleDrawEnd} />
+          </>
+        )}
         {/* <PopupTool /> */}
       </ToolContainer>
     </>

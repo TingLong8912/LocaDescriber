@@ -4,24 +4,26 @@ export default function ThesisDetails() {
   const sections = [
     {
       title: "Research Background and Motivation",
-      content: <p>This study analyzes the semantic ambiguity of geographic spatial descriptions...</p>,
-      image: "/images/image1.jpg",
+      content: <p>
+        The current capabilities of GIS in handling semantic information remain largely limited to the geometric level, lacking effective methods to support the semantic understanding of location and the generation of location descriptions. This limitation is particularly evident in reverse geocoding, where the process of converting coordinates into human-readable descriptions often relies solely on administrative or address-based data, failing to capture contextual or semantic spatial relationships. Consequently, enabling spatial data to carry semantic understanding and expressive capabilities regarding location has emerged as a critical research challenge, especially in applications that require more nuanced or context-aware location descriptions, such as disaster response or spatial decision support.
+      </p>,
+      image: "/images/congition.png",
     },
     {
       title: "Research Methods",
-      content: <p>Combines the DOLCE upper ontology, SWRL rule reasoning, and geographic semantic relationship modeling...</p>,
-      image: "/images/image2.jpg",
+      content: <p>An ontology-based semantic location description (O-SLD) framework is proposed to integrate spatial data with semantic knowledge of location descriptions for natural language semantic representation.</p>,
+      image: "/images/three-layered.png",
     },
     {
       title: "Research Contributions",
       content: (
         <ul className="list-disc list-inside">
-          <li>Proposed a semantic spatial relationship inference framework</li>
-          <li>Integrated WebGIS with ontology technology</li>
-          <li>Applied to the generation of spatial explanations in disaster contexts</li>
+          <li>Proposed a locational semantic inference framework</li>
+          <li>Integrated WebGIS with ontology and SWRL technology</li>
+          <li>Applied to the generation of location descriptions in traffic and diaster warning contexts</li>
         </ul>
       ),
-      image: "/images/image3.jpg",
+      // image: "/images/image3.jpg",
     },
   ];
 
@@ -49,7 +51,7 @@ export default function ThesisDetails() {
             </div>
           ))}
         </div>
-        <div className="hidden lg:flex lg:w-1/2 lg:pl-4 items-center justify-center relative border">
+        <div className="hidden h-100 lg:flex lg:w-1/2 lg:pl-4 items-center justify-center relative">
           {sections.map((section, index) => (
             <img
               key={index}

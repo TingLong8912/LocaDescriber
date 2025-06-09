@@ -9,8 +9,8 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
-  const [isSidebarOpen, setIsSidebarOpen] = usePersistentState('sidebar-open', true);
-  const [isEventPanelOpen, setIsEventPanelOpen] = usePersistentState('eventpanel-open', true);
+  const [isSidebarOpen, setIsSidebarOpen] = usePersistentState('sidebar-open', false);
+  const [isEventPanelOpen, setIsEventPanelOpen] = usePersistentState('eventpanel-open', false);
   const pathname = usePathname();
   const showPanel = pathname !== '/home';
 
@@ -38,7 +38,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
           isEventPanelOpen={isEventPanelOpen}
           setIsEventPanelOpen={setIsEventPanelOpen}
         />
-        <main className="flex-grow h-full w-full overflow-auto">
+        <main className="flex-grow h-full w-full overflow-hidden">
           {children}
         </main>
       </div>

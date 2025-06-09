@@ -25,7 +25,7 @@ export function usePersistentState<T>(key: string, initialValue: T): [T, (value:
     }
   }, [key, state]);
 
-  const safeState = state === undefined ? (true as unknown as T) : state;
+  const safeState = state === undefined ? (false as unknown as T) : state;
 
   return [safeState, setState];
 }

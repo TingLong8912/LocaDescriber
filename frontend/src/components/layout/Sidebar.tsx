@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import SidebarItem from '@/components/ui/SidebarItem';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -44,15 +45,9 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
     <>
       <p className="font-medium mb-2">Sidebar Menu</p>
       <ul className="space-y-2">
-        <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/home')}>
-          Home
-        </li>
-        <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/map')}>
-          Map
-        </li>
-        <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/ontology')}>
-          Ontology
-        </li>
+        <SidebarItem label="Home" href="/home" />
+        <SidebarItem label="Map" href="/map" />
+        <SidebarItem label="Ontology" href="/ontology" />
       </ul>
       <button onClick={onClose} className="mt-4 text-sm underline">
         Close

@@ -1,10 +1,15 @@
+"use client";
+
 import { MapViewer } from '@/components/map/MapViewer';
-import { DrawTool } from '@/components/map/tools/DrawTool';
+import { useSearchParams } from 'next/navigation';
 
 export default function MapPage() {
+  const searchParams = useSearchParams();
+  const featureId = searchParams.get('featureId');
+
   return (
     <>
-      <MapViewer />
+      <MapViewer featureId={featureId} />
     </>
   );
 }

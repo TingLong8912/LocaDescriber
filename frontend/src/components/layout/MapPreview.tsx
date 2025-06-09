@@ -69,7 +69,7 @@ const MapPreview = ({ geometry }: MapPreviewProps) => {
         center={centerLatLng}
         zoom={18}
         scrollWheelZoom={false}
-        dragging={true}
+        dragging={false}
         doubleClickZoom={false}
         zoomControl={false}
         attributionControl={false}
