@@ -1,0 +1,2756 @@
+[
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthPart",
+      "label": "NorthPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Debris",
+      "label": "Debris"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BoundaryLocaliser",
+      "label": "BoundaryLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MiddleRiverLocaliser",
+      "label": "MiddleRiverLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "label": "GeometryCollection"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Intersects",
+      "label": "Intersects"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NortheastLocaliser",
+      "label": "NortheastLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Relatum",
+      "label": "Relatum"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "label": "Triplet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Address",
+      "label": "Address"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialLocation_q",
+      "label": "SpatialLocation_q"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#GeographicFacet",
+      "label": "GeographicFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Prominence",
+      "label": "Prominence"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NationalHighwayBridge",
+      "label": "NationalHighwayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Affordance",
+      "label": "Affordance"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthwestPartLocaliser",
+      "label": "SouthwestPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Crosses",
+      "label": "Crosses"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#External",
+      "label": "External"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NationalExpresswayTunnel",
+      "label": "NationalExpresswayTunnel"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UrbanRoadBridge",
+      "label": "UrbanRoadBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#VerbalReference",
+      "label": "VerbalReference"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AtSpatialPreposition",
+      "label": "AtSpatialPreposition"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "label": "SpatialOperation"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthwestPartLocaliser",
+      "label": "NorthwestPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialObject",
+      "label": "SpatialObject"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Edge",
+      "label": "Edge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Beneath",
+      "label": "Beneath"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FrontPart",
+      "label": "FrontPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Behavior",
+      "label": "Behavior"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RelevantPart",
+      "label": "RelevantPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ProvincialExpresswayBridge",
+      "label": "ProvincialExpresswayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Point",
+      "label": "Point"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Scale",
+      "label": "Scale"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthEndPartLocaliser",
+      "label": "SouthEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Touches",
+      "label": "Touches"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Hide",
+      "label": "Hide"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NameP",
+      "label": "NameP"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#North",
+      "label": "North"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RelativeDirection",
+      "label": "RelativeDirection"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Surrounding",
+      "label": "Surrounding"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PlaceDescription",
+      "label": "PlaceDescription"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EndPart",
+      "label": "EndPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NonAgentiveSocialObject",
+      "label": "NonAgentiveSocialObject"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Transformation",
+      "label": "Transformation"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ReverseGeocodingEvent",
+      "label": "ReverseGeocodingEvent"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Specificity",
+      "label": "Specificity"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "label": "SpatioTemporalParticular"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PartsandStructure",
+      "label": "PartsandStructure"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "DirectionFunction"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Traffic",
+      "label": "Traffic"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LeftSideLocaliser",
+      "label": "LeftSideLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Contains",
+      "label": "Contains"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#TopLocaliser",
+      "label": "TopLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#East",
+      "label": "East"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BasePart",
+      "label": "BasePart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LowerRiverLocaliser",
+      "label": "LowerRiverLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiLineString",
+      "label": "MultiLineString"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Distance",
+      "label": "Distance"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PlaceP",
+      "label": "PlaceP"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DirectionLocaliser",
+      "label": "DirectionLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SoutheastLocaliser",
+      "label": "SoutheastLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NortheastPartLocaliser",
+      "label": "NortheastPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "label": "Geometry"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DependentPlace",
+      "label": "DependentPlace"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialReference",
+      "label": "SpatialReference"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalObject",
+      "label": "PhysicalObject"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Boundary",
+      "label": "Boundary"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Event",
+      "label": "Event"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SurfaceLocaliser",
+      "label": "SurfaceLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Endurant",
+      "label": "Endurant"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UrbanExpresswayBridge",
+      "label": "UrbanExpresswayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FigureFeature",
+      "label": "FigureFeature"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthEastEndPartLocaliser",
+      "label": "NorthEastEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthPart",
+      "label": "SouthPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthernPartLocaliser",
+      "label": "SouthernPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialConcpet",
+      "label": "SpatialConcpet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BelowLocaliser",
+      "label": "BelowLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#HighwayTunnel",
+      "label": "HighwayTunnel"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BinarySpatialRelationship",
+      "label": "BinarySpatialRelationship"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RightSideLocaliser",
+      "label": "RightSideLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LaneBridge",
+      "label": "LaneBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MiddleLowerRiverLocaliser",
+      "label": "MiddleLowerRiverLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthLocaliser",
+      "label": "NorthLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WestEndPartLocaliser",
+      "label": "WestEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SoutheastPartLocaliser",
+      "label": "SoutheastPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "label": "FunctionalFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiSurface",
+      "label": "MultiSurface"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LineString",
+      "label": "LineString"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthWestEndPartLocaliser",
+      "label": "SouthWestEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.opengis.net/ont/sf#Geometry",
+      "label": "Geometry"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Upper",
+      "label": "Upper"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LocationFunction",
+      "label": "LocationFunction"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WesternPartLocaliser",
+      "label": "WesternPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialPreposition",
+      "label": "SpatialPreposition"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthEastEndPartLocaliser",
+      "label": "SouthEastEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ProvincialHighwayBridge",
+      "label": "ProvincialHighwayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WestLocaliser",
+      "label": "WestLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Accomplishment",
+      "label": "Accomplishment"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UpperRiverLocaliser",
+      "label": "UpperRiverLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Action",
+      "label": "Action"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Earthquake",
+      "label": "Earthquake"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "PositionalFunction"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthWestEndPartLocaliser",
+      "label": "NorthWestEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet",
+      "label": "AnthropocentricFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BackLocaliser",
+      "label": "BackLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Role",
+      "label": "Role"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Internal",
+      "label": "Internal"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#NationalExpressway",
+      "label": "NationalExpressway"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Context",
+      "label": "Context"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RightEndPartLocaliser",
+      "label": "RightEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "label": "DisasterWarning"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Curve",
+      "label": "Curve"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidwestLocaliser",
+      "label": "MidwestLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Typology",
+      "label": "Typology"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#StyleandForm",
+      "label": "StyleandForm"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#InBetween",
+      "label": "InBetween"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#InFront",
+      "label": "InFront"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#QuantitativeSpatilaRelationship",
+      "label": "QuantitativeSpatilaRelationship"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SocialObject",
+      "label": "SocialObject"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "Bridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WestPart",
+      "label": "WestPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "label": "Concept"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Purpose",
+      "label": "Purpose"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiPolygon",
+      "label": "MultiPolygon"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Quality",
+      "label": "Quality"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "label": "DerivedFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiPoint",
+      "label": "MultiPoint"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Equals",
+      "label": "Equals"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Left",
+      "label": "Left"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RuralRoadBridge",
+      "label": "RuralRoadBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Locatum",
+      "label": "Locatum"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EndLocaliser",
+      "label": "EndLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Identity",
+      "label": "Identity"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthernEndPartLocaliser",
+      "label": "NorthernEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidLandLocaliser",
+      "label": "MidLandLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Perdurant",
+      "label": "Perdurant"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#InsideLocaliser",
+      "label": "InsideLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DirectionRelation",
+      "label": "DirectionRelation"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Right",
+      "label": "Right"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EastPartLocaliser",
+      "label": "EastPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NationalExpresswayBridge",
+      "label": "NationalExpresswayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthwestLocaliser",
+      "label": "SouthwestLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Feature",
+      "label": "Feature"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#CountyHighwayBridge",
+      "label": "CountyHighwayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidnorthLocaliser",
+      "label": "MidnorthLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiCurve",
+      "label": "MultiCurve"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Overlaps",
+      "label": "Overlaps"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalQuality",
+      "label": "PhysicalQuality"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#South",
+      "label": "South"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "Localiser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Polygon",
+      "label": "Polygon"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UpperLocaliser",
+      "label": "UpperLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#CentrePart",
+      "label": "CentrePart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ExpresswayBridge",
+      "label": "ExpresswayBridge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Within",
+      "label": "Within"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Location",
+      "label": "Location"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#OnSite",
+      "label": "OnSite"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "label": "SpatialFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant",
+      "label": "PhysicalEndurant"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EastPart",
+      "label": "EastPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "label": "LocationDescription"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#OutsideLocaliser",
+      "label": "OutsideLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet",
+      "label": "PhysicalFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "label": "AbstractQuality"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Particular",
+      "label": "Particular"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DistanceRelation",
+      "label": "DistanceRelation"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PlaceName",
+      "label": "PlaceName"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Ramp",
+      "label": "Ramp"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FrontLocaliser",
+      "label": "FrontLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UndergroundNationalExpressway",
+      "label": "UndergroundNationalExpressway"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BottomLocaliser",
+      "label": "BottomLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthwestLocaliser",
+      "label": "NorthwestLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RightPart",
+      "label": "RightPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#HindPart",
+      "label": "HindPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Disjoint",
+      "label": "Disjoint"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UpperPartLocaliser",
+      "label": "UpperPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LeftEndPartLocaliser",
+      "label": "LeftEndPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Toponym",
+      "label": "Toponym"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "label": "EmotiveFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthLocaliser",
+      "label": "SouthLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#SpatialObjectType",
+      "label": "SpatialObjectType"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialValue",
+      "label": "SpatialValue"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet",
+      "label": "LinguisticFacet"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LeftPart",
+      "label": "LeftPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Road",
+      "label": "Road"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EastLocaliser",
+      "label": "EastLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Discharge",
+      "label": "Discharge"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Rainfall",
+      "label": "Rainfall"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#West",
+      "label": "West"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#GroundFeature",
+      "label": "GroundFeature"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthernPartLocaliser",
+      "label": "NorthernPartLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant",
+      "label": "NonPhysicalEndurant"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#gSurface",
+      "label": "gSurface"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AbsoluteDirection",
+      "label": "AbsoluteDirection"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#TopPart",
+      "label": "TopPart"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "label": "SpatialRelationship"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Surface",
+      "label": "Surface"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidsouthLocaliser",
+      "label": "MidsouthLocaliser"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "TopologyRelation"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Crosses_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Crosses",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialObject_to_http://www.semanticweb.org/win/ontologies/locD#PhysicalObject",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialObject",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PhysicalObject",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UpperLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#UpperLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Within_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Within",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BackLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#BackLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BinarySpatialRelationship_to_http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#BinarySpatialRelationship",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LocationFunction_to_http://www.semanticweb.org/win/ontologies/locD#BinarySpatialRelationship",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LocationFunction",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#BinarySpatialRelationship",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Right_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Right",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation_to_http://www.semanticweb.org/win/ontologies/locD#ReverseGeocodingEvent",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#ReverseGeocodingEvent",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MiddleLowerRiverLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MiddleLowerRiverLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PartsandStructure_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#SpatialObjectType",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PartsandStructure",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#SpatialObjectType",
+      "label": "equivalentClass"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#External_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#External",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Discharge_to_http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Discharge",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Intersects_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Intersects",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthernEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthernEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#QuantitativeSpatilaRelationship_to_http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#QuantitativeSpatilaRelationship",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Edge_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Edge",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EastPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#EastPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Identity_to_http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Identity",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialReference_to_http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialReference",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RightSideLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#RightSideLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Disjoint_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Disjoint",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialValue_to_http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialValue",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Accomplishment_to_http://www.semanticweb.org/win/ontologies/locD#Event",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Accomplishment",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Event",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiPoint_to_http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MultiPoint",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#South_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#South",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#North_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#North",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PartsandStructure_to_http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PartsandStructure",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet_to_http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Relatum_to_http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Relatum",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Context_to_http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Context",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialLocation_q_to_http://www.semanticweb.org/win/ontologies/locD#PhysicalQuality",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialLocation_q",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PhysicalQuality",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Distance_to_http://www.semanticweb.org/win/ontologies/locD#DistanceRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Distance",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DistanceRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ProvincialExpresswayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#ProvincialExpresswayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Specificity_to_http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Specificity",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Locatum_to_http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Locatum",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Feature_to_http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Feature",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NameP_to_http://www.semanticweb.org/win/ontologies/locD#PlaceName",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NameP",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PlaceName",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SoutheastPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SoutheastPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Internal_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Internal",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Curve_to_http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Curve",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RelativeDirection_to_http://www.semanticweb.org/win/ontologies/locD#DirectionRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#RelativeDirection",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Ramp_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Road",
+      "source": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Ramp",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Road",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#OnSite_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#OnSite",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Contains_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Contains",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidsouthLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MidsouthLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#HindPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#HindPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalQuality_to_http://www.semanticweb.org/win/ontologies/locD#Quality",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PhysicalQuality",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Quality",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BasePart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#BasePart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship_to_http://www.semanticweb.org/win/ontologies/locD#SpatialConcpet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialConcpet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Traffic_to_http://www.semanticweb.org/win/ontologies/locD#Context",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Traffic",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Context",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation_to_http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthWestEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthWestEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LeftPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LeftPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DirectionRelation_to_http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DirectionRelation",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NationalExpresswayTunnel_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#HighwayTunnel",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NationalExpresswayTunnel",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#HighwayTunnel",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Geometry_to_http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Location_to_http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Location",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Surface_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Surface",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#TopLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#TopLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#gSurface_to_http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#gSurface",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Concept_to_http://www.semanticweb.org/win/ontologies/locD#NonAgentiveSocialObject",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#NonAgentiveSocialObject",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiCurve_to_http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MultiCurve",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BelowLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#BelowLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiLineString_to_http://www.semanticweb.org/win/ontologies/locD#MultiCurve",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MultiLineString",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#MultiCurve",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet_to_http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Debris_to_http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Debris",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#StyleandForm_to_http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#StyleandForm",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UndergroundNationalExpressway_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#NationalExpressway",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#UndergroundNationalExpressway",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#NationalExpressway",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WestLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#WestLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet_to_http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#AnthropocentricFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Event_to_http://www.semanticweb.org/win/ontologies/locD#Perdurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Event",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Perdurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Overlaps_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Overlaps",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UrbanRoadBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#UrbanRoadBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthEastEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthEastEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#GeographicFacet_to_http://www.semanticweb.org/win/ontologies/locD#SpatialLocation_q",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#GeographicFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialLocation_q",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NationalExpresswayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NationalExpresswayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthWestEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthWestEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#InFront_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#InFront",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UpperRiverLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#UpperRiverLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Affordance_to_http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Affordance",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PlaceDescription_to_http://www.semanticweb.org/win/ontologies/locD#VerbalReference",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PlaceDescription",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#VerbalReference",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialFacet_to_http://www.semanticweb.org/win/ontologies/locD#GeographicFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#GeographicFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RightPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#RightPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Rainfall_to_http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Rainfall",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Surrounding_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Surrounding",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Prominence_to_http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Prominence",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#EmotiveFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Transformation_to_http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Transformation",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#InsideLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#InsideLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EastLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#EastLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NationalHighwayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NationalHighwayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DirectionLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DirectionLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant_to_http://www.semanticweb.org/win/ontologies/locD#Endurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Endurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LineString_to_http://www.semanticweb.org/win/ontologies/locD#Curve",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LineString",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Curve",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiPolygon_to_http://www.semanticweb.org/win/ontologies/locD#MultiSurface",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MultiPolygon",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#MultiSurface",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FigureFeature_to_http://www.semanticweb.org/win/ontologies/locD#Role",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#FigureFeature",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Role",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction_to_http://www.semanticweb.org/win/ontologies/locD#LocationFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LocationFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Upper_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Upper",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ProvincialHighwayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#ProvincialHighwayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant_to_http://www.semanticweb.org/win/ontologies/locD#Endurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Endurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Toponym_to_http://www.semanticweb.org/win/ontologies/locD#VerbalReference",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Toponym",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#VerbalReference",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DistanceRelation_to_http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DistanceRelation",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialOperation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#CountyHighwayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#CountyHighwayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalObject_to_http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PhysicalObject",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PhysicalEndurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#VerbalReference_to_http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#VerbalReference",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Equals_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Equals",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DerivedFacet_to_http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AbsoluteDirection_to_http://www.semanticweb.org/win/ontologies/locD#DirectionRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#AbsoluteDirection",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Action_to_http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Action",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SurfaceLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SurfaceLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Address_to_http://www.semanticweb.org/win/ontologies/locD#SpatialReference",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Address",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialReference",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RightEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#RightEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SocialObject_to_http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SocialObject",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#East_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#East",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialConcpet_to_http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialConcpet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WestEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#WestEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Earthquake_to_http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Earthquake",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LowerRiverLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LowerRiverLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ExpresswayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#ExpresswayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Triplet_to_http://www.semanticweb.org/win/ontologies/locD#SpatialReference",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialReference",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet_to_http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LinguisticFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Role_to_http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Role",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Concept",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthEastEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthEastEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidnorthLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MidnorthLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Scale_to_http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Scale",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning_to_http://www.semanticweb.org/win/ontologies/locD#Context",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DisasterWarning",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Context",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LaneBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LaneBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AbstractQuality_to_http://www.semanticweb.org/win/ontologies/locD#Quality",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#AbstractQuality",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Quality",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PlaceP_to_http://www.semanticweb.org/win/ontologies/locD#PlaceName",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PlaceP",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PlaceName",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Endurant_to_http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Endurant",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet_to_http://www.semanticweb.org/win/ontologies/locD#GeographicFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PhysicalFacet",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#GeographicFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PlaceName_to_http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PlaceName",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthernPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthernPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidwestLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MidwestLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MiddleRiverLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MiddleRiverLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EndLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#EndLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EastPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#EastPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LocationDescription_to_http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#NonPhysicalEndurant",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Quality_to_http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Quality",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Behavior_to_http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Behavior",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#FunctionalFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Left_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Left",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#CentrePart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#CentrePart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Purpose_to_http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Purpose",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialPreposition_to_http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialPreposition",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NonAgentiveSocialObject_to_http://www.semanticweb.org/win/ontologies/locD#SocialObject",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NonAgentiveSocialObject",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SocialObject",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WesternPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#WesternPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthernPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthernPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship_to_http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatialRelationship",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Triplet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RuralRoadBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#RuralRoadBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UrbanExpresswayBridge_to_http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#UrbanExpresswayBridge",
+      "target": "http://www.semanticweb.org/yantinglong/ontologies/2025/0/spatialojbecttype#Bridge",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Localiser_to_http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LocationDescription",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#EndPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#EndPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MultiSurface_to_http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MultiSurface",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SoutheastLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SoutheastLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular_to_http://www.semanticweb.org/win/ontologies/locD#Particular",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Particular",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Typology_to_http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Typology",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DerivedFacet",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BoundaryLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#BoundaryLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Perdurant_to_http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Perdurant",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatioTemporalParticular",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Boundary_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Boundary",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NortheastPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NortheastPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Point_to_http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Point",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Beneath_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Beneath",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#GroundFeature_to_http://www.semanticweb.org/win/ontologies/locD#Role",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#GroundFeature",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Role",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction_to_http://www.semanticweb.org/win/ontologies/locD#LocationFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#LocationFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#WestPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#WestPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthwestPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthwestPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#UpperPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#UpperPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#OutsideLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#OutsideLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NortheastLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NortheastLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Hide_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Hide",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#AtSpatialPreposition_to_http://www.semanticweb.org/win/ontologies/locD#SpatialPreposition",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#AtSpatialPreposition",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#SpatialPreposition",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LeftEndPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LeftEndPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#RelevantPart_to_http://www.semanticweb.org/win/ontologies/locD#Feature",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#RelevantPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Feature",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#InBetween_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#InBetween",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthwestPartLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthwestPartLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#SouthwestLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#SouthwestLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#MidLandLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#MidLandLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.opengis.net/ont/sf#Geometry_to_http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "source": "http://www.opengis.net/ont/sf#Geometry",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "label": "equivalentClass"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#TopPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#TopPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Polygon_to_http://www.semanticweb.org/win/ontologies/locD#gSurface",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Polygon",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#gSurface",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#Touches_to_http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#Touches",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#TopologyRelation",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#West_to_http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#West",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#DirectionFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FrontLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#FrontLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#BottomLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#BottomLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#GeometryCollection_to_http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#GeometryCollection",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Geometry",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#ReverseGeocodingEvent_to_http://www.semanticweb.org/win/ontologies/locD#Accomplishment",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#ReverseGeocodingEvent",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Accomplishment",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#DependentPlace_to_http://www.semanticweb.org/win/ontologies/locD#Feature",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#DependentPlace",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Feature",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#NorthwestLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#NorthwestLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#FrontPart_to_http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#FrontPart",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#PositionalFunction",
+      "label": "subClassOf"
+    }
+  },
+  {
+    "data": {
+      "id": "http://www.semanticweb.org/win/ontologies/locD#LeftSideLocaliser_to_http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "source": "http://www.semanticweb.org/win/ontologies/locD#LeftSideLocaliser",
+      "target": "http://www.semanticweb.org/win/ontologies/locD#Localiser",
+      "label": "subClassOf"
+    }
+  }
+]

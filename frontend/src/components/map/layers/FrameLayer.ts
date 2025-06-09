@@ -17,7 +17,7 @@ export const createFrameLayer = (map: Map) => {
     source,
     style: new Style({
       stroke: new Stroke({
-        color: "rgba(255,99,92,255)",
+        color: "rgba(22,22,22,0.1)",
         width: 2,
       }),
     }),
@@ -29,4 +29,24 @@ export const createFrameLayer = (map: Map) => {
   }
 
   return layer;
+};
+
+export const getFrameExtent = (): [number, number, number, number] => {
+  const features = new GeoJSON().readFeatures(frameData, {
+    featureProjection: "EPSG:3857",
+  });
+  const source = new VectorSource({ features });
+  const extent = source.getExtent();
+  const buffer = 30000;
+  extent[0] -= buffer;
+  extent[1] -= buffer;
+  extent[2] += buffer;
+  extent[3] += buffer;
+  // Ensure extent is always a 4-element array
+  if (extent.length === 4) {
+    return extent as [number, number, number, number];
+  } else {
+    // Return a default extent if not available
+    return [0, 0, 0, 0];
+  }
 };

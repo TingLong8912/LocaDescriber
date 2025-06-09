@@ -8,6 +8,7 @@ import View from "ol/View";
 import "ol/ol.css";
 import { createBaseLayer } from "@/components/map/layers/BaseLayer";
 import { createFrameLayer } from "@/components/map/layers/FrameLayer";
+import { getFrameExtent } from "@/components/map/layers/FrameLayer";
 import PopupTool from "@/components/map/tools/PopupTool";
 import ContextLayerSwitcher from "@/components/map/tools/ContextLayerSwitcher";
 import ToolContainer from "@/components/map/tools/ToolContainer";
@@ -16,9 +17,12 @@ import { Vector as VectorSource } from "ol/source";
 import { Style, Stroke } from "ol/style";
 import { DrawTool } from "./tools/DrawTool";
 import { getLocationDescription } from "@/lib/api";
+import GeoJSON from "ol/format/GeoJSON";
+import Feature from "ol/Feature";
 import { EyeOff } from "lucide-react";
 import { TooltipDemo } from "@/components/ui/Tooltips";
 import { createInputLayer } from "./layers/InputLayer";
+import { defaults as defaultInteractions } from "ol/interaction";
 
 export const MapViewer = ({ featureId }: { featureId?: string }) => {
   const [context, setContext] = useState<string>("Traffic"); // Example context state
@@ -57,6 +61,13 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
           center: fromLonLat([121, 24]),
           zoom: 9,
           projection: "EPSG:3857",
+          extent: getFrameExtent(),
+        }),
+        interactions: defaultInteractions({
+          dragPan: !featureId,
+          mouseWheelZoom: !featureId,
+          doubleClickZoom: !featureId,
+          pinchZoom: !featureId,
         }),
       });
 
@@ -114,12 +125,32 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
     console.log("Draw finished:", geometry);
     console.log("Context:", context);
 
-    if (geometry.getType() === "Point") {
-      const coordinate = geometry.getCoordinates();
-      const [lat, lon] = toLonLat(coordinate);
-      const res = await getLocationDescription(lon, lat, context);
-      console.log("Location description:", res);
+    const geojsonObj = new GeoJSON().writeFeatureObject(new Feature({ geometry }));
+
+    // Convert coordinates to EPSG:4326 for Point, LineString, Polygon
+    const type = geometry.getType();
+    if (type === "Point") {
+      const [x, y] = geometry.getCoordinates();
+      const [lon, lat] = toLonLat([x, y]);
+      (geojsonObj.geometry as { coordinates: number[] }).coordinates = [lon, lat];
+    } else if (type === "LineString") {
+      (geojsonObj.geometry as { coordinates: number[][] }).coordinates = geometry.getCoordinates().map(([x, y]: number[]) =>
+        toLonLat([x, y])
+      );
+    } else if (type === "Polygon") {
+      (geojsonObj.geometry as { coordinates: number[][][] }).coordinates = geometry.getCoordinates().map((ring: number[][]) =>
+        ring.map(([x, y]: number[]) => toLonLat([x, y]))
+      );
     }
+
+    // Wrap the single feature GeoJSON into a FeatureCollection before sending to the API.
+    const featureCollection = {
+      type: "FeatureCollection",
+      features: [geojsonObj]
+    };
+
+    const res = await getLocationDescription(featureCollection as unknown as JSON, context);
+    console.log("Location description:", res);
   };
 
   return (
@@ -133,7 +164,7 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
       <ToolContainer>
         {featureId ? (
           <div className="flex items-center justify-between">
-            <span className="mr-2 px-4 py-2 rounded-md bg-primary-a text-primary-foreground">View Only</span>
+            <span className="mr-2 px-4 py-2 rounded-md bg-primary-a text-primary-foreground">View Case Only</span>
             <TooltipDemo tooltip="Exit Preview Mode">
               <a href="/map">
                 <EyeOff />
@@ -154,7 +185,7 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
             <DrawTool onDrawEnd={handleDrawEnd} />
           </>
         )}
-        {/* <PopupTool /> */}
+        <PopupTool />
       </ToolContainer>
     </>
   );

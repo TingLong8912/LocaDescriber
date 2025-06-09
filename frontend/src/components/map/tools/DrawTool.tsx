@@ -27,7 +27,7 @@ const geometryOptions = [
 ];
 
 export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void }) => {
-  const { map } = useMapContext();
+  const { map, setIsDrawing } = useMapContext();
   const [drawType, setDrawType] = useState<GeometryType>("None");
 
   useEffect(() => {
@@ -40,7 +40,6 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
     let draw: Draw | null = null;
 
     if (drawType !== "None") {
-      drawSource.clear();
       draw = new Draw({
         source: drawSource,
         type: drawType === "Box" ? "Circle" : drawType, 
@@ -48,19 +47,31 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
       });
 
       draw.on('drawend', (event) => {
+        drawSource.clear();
         const geometry = event.feature.getGeometry();
         if (onDrawEnd) {
           onDrawEnd(geometry);
+        }
+
+        if (draw) { 
+          map.removeInteraction(draw);
+          setDrawType("None");
+          setIsDrawing(false);
         }
       });
 
       map.addInteraction(draw);
     }
 
+    if (drawType !== "None") {
+      setIsDrawing(true);
+    }
+
     return () => {
       if (draw) map.removeInteraction(draw);
+      setIsDrawing(false);
     };
-  }, [map, drawType, onDrawEnd]);
+  }, [map, drawType, onDrawEnd, setIsDrawing]);
 
   const selected = geometryOptions.find((opt) => opt.id === drawType);
 

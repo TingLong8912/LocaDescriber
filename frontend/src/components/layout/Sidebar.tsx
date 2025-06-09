@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SidebarItem from '@/components/ui/SidebarItem';
+import { Home, Map, Circle } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -45,9 +46,9 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
     <>
       <p className="font-medium mb-2">Sidebar Menu</p>
       <ul className="space-y-2">
-        <SidebarItem label="Home" href="/home" />
-        <SidebarItem label="Map" href="/map" />
-        <SidebarItem label="Ontology" href="/ontology" />
+        <SidebarItem label="Home" href="/home" icon={<Home className='h-5 w-5 mr-2' />} />
+        <SidebarItem label="Map" href="/map" icon={<Map className='h-5 w-5 mr-2' />} /> 
+        <SidebarItem label="Ontology" href="/ontology" icon={<Circle className='h-5 w-5 mr-2' />} />
       </ul>
       <button onClick={onClose} className="mt-4 text-sm underline">
         Close

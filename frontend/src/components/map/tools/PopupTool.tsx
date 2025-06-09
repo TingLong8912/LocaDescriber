@@ -1,21 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Overlay from "ol/Overlay";
 import { toStringHDMS } from "ol/coordinate";
 import { useMapContext } from "@/context/MapContext";
 
 const PopupTool = () => {
-  const { map } = useMapContext();
+  const { map, isDrawing } = useMapContext();
   const [popupContent, setPopupContent] = useState<string | null>(null);
   const [popupCoord, setPopupCoord] = useState<number[] | null>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!map) return;
+    if (!popupRef.current) return;
 
-    const container = document.getElementById("popup")!;
     const overlay = new Overlay({
-      element: container,
+      element: popupRef.current,
       autoPan: true,
     });
     // Set autoPanAnimation after creation if needed
@@ -24,14 +25,16 @@ const PopupTool = () => {
     map.addOverlay(overlay);
 
     const handleClick = (evt: any) => {
+      if (isDrawing) return;
       const feature = map.forEachFeatureAtPixel(evt.pixel, (f) => f);
       if (feature) {
         const props = feature.getProperties();
-        const content = Object.entries(props)
-          .filter(([key]) => key !== "geometry")
-          .map(([key, value]) => `<tr><td>${key}</td><td>${value}</td></tr>`)
-          .join("");
-        setPopupContent(`<table class="text-sm">${content}</table>`);
+        // const content = Object.entries(props)
+        //   .filter(([key]) => key !== "geometry")
+        //   .map(([key, value]) => `<tr><td>${key}</td><td>${value}</td></tr>`)
+        //   .join("");
+        // setPopupContent(`<table class="text-sm">${content}</table>`);
+        setPopupContent(`<table class="text-sm">TEST</table>`);
         setPopupCoord(evt.coordinate);
         overlay.setPosition(evt.coordinate);
       } else {
@@ -45,10 +48,11 @@ const PopupTool = () => {
       map.un("singleclick", handleClick);
       map.removeOverlay(overlay);
     };
-  }, [map]);
+  }, [map, isDrawing]);
 
   return (
     <div
+      ref={popupRef}
       id="popup"
       className="bg-white border border-gray-300 shadow-md rounded p-2 absolute z-10"
       style={{ position: "absolute", minWidth: "200px", pointerEvents: "auto" }}
