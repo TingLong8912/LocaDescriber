@@ -1,1 +1,24 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"coordinates":[[[121.54201178974091,25.024581756061806],[121.54194251709697,25.024461922801635],[121.54220228951817,25.02444908351633],[121.54214246314206,25.02459174216125],[121.54201178974091,25.024581756061806]]],"type":"Polygon"},"id":0}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "LocationDescription": "Located at Lane 2, Alley 118, Section 2, Heping East Road, Daan District, Taipei City (near National Science and Technology Council)."
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [121.54201178974091, 25.024581756061806],
+            [121.54194251709697, 25.024461922801635],
+            [121.54220228951817, 25.02444908351633],
+            [121.54214246314206, 25.02459174216125],
+            [121.54201178974091, 25.024581756061806]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 0
+    }
+  ]
+}

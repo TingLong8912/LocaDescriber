@@ -13,23 +13,24 @@ import PopupTool from "@/components/map/tools/PopupTool";
 import ContextLayerSwitcher from "@/components/map/tools/ContextLayerSwitcher";
 import ToolContainer from "@/components/map/tools/ToolContainer";
 import VectorLayer from "ol/layer/Vector";
-import { Vector as VectorSource } from "ol/source";
-import { Style, Stroke } from "ol/style";
 import { DrawTool } from "./tools/DrawTool";
-import { getLocationDescription } from "@/lib/api";
 import GeoJSON from "ol/format/GeoJSON";
 import Feature from "ol/Feature";
 import { EyeOff } from "lucide-react";
 import { TooltipDemo } from "@/components/ui/Tooltips";
 import { createInputLayer } from "./layers/InputLayer";
 import { defaults as defaultInteractions } from "ol/interaction";
+import { useRunStreamingLocationDescription } from "@/hooks/useRunStreamingLocationDescription";
 
 export const MapViewer = ({ featureId }: { featureId?: string }) => {
   const [context, setContext] = useState<string>("Traffic"); // Example context state
+  const [geojson, setGeojson] = useState<JSON | null>(null);
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapObjectRef = useRef<Map | null>(null);
   const { setMap } = useMapContext();
   const layerRefs = useRef<{ [key: string]: VectorLayer<any> }>({});
+
+  useRunStreamingLocationDescription(geojson, context);
 
   useEffect(() => {
     if (!featureId) return;
@@ -149,8 +150,7 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
       features: [geojsonObj]
     };
 
-    const res = await getLocationDescription(featureCollection as unknown as JSON, context);
-    console.log("Location description:", res);
+    setGeojson(featureCollection as unknown as JSON);
   };
 
   return (

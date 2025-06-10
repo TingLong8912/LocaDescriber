@@ -1,13 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import ProgressItem from '@/components/ui/ProgressItem';
+import { CheckCheck, CircleDashed, LoaderCircle } from 'lucide-react';
+import { useProgress } from '@/context/ProgressContext';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export function EventPanel({ isOpen, onClose }: SidebarProps) {
+export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
 
   return (
@@ -19,7 +18,7 @@ export function EventPanel({ isOpen, onClose }: SidebarProps) {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 260, opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="absolute top-0 right-0 z-30 w-64 h-full border-l bg-background p-4 hidden lg:block"
+        className="absolute top-0 right-0 z-30 w-64 h-full border-l bg-background py-4 hidden lg:block"
       >
         <SidebarContent onClose={onClose} />
       </motion.aside>
@@ -40,20 +39,54 @@ export function EventPanel({ isOpen, onClose }: SidebarProps) {
 }
 
 function SidebarContent({ onClose }: { onClose: () => void }) {
+  const { steps } = useProgress();
+
   return (
-    <>
-      <p className="font-medium mb-2">Panel</p>
-      <ul className="space-y-2">
-        <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/home')}>
-          Home
-        </li>
-        <li className="cursor-pointer hover:underline" onClick={() => (window.location.href = '/map')}>
-          Map
-        </li>
-      </ul>
-      <button onClick={onClose} className="mt-4 text-sm underline">
-        Close
-      </button>
-    </>
+    <div className="flex flex-col h-full overflow-y-auto">
+      <span className="text-md h-11 px-3 font-semibold flex items-end">Processing Steps</span>
+      <div className="flex flex-col items-stretch">
+        {steps.map((step, i) => (
+          <Step key={i} label={step.label} status={step.status} details={step.details} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Step({
+  label,
+  status,
+  details,
+}: {
+  label: string;
+  status: 'completed' | 'active' | 'pending';
+  details?: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  const statusColor = {
+    completed: "text-green-600",
+    active: "text-blue-600",
+    pending: "text-gray-400",
+  };
+
+  const icon = {
+    completed: <CheckCheck />,
+    active: <LoaderCircle className="animate-spin" />,
+    pending: <CircleDashed />,
+  };
+
+  return (
+    <div>
+      <ProgressItem
+        label={label}
+        icon={icon[status]}
+        actived={status === "active"}
+        onClick={() => details && setExpanded(!expanded)}
+      />
+      {expanded && details && (
+        <div className="text-sm text-muted-foreground whitespace-pre-wrap">{details}</div>
+      )}
+    </div>
   );
 }

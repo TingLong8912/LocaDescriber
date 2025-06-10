@@ -53,12 +53,12 @@ export const createInputLayer = (map: Map, geojson: any) => {
 
   if (source.getFeatures().length > 0) {
     const extent = source.getExtent();
-    const buffer = 500;
+    const buffer = 200;
     extent[0] -= buffer;
     extent[1] -= buffer;
     extent[2] += buffer;
     extent[3] += buffer;
-    map.getView().fit(extent, { padding: [500, 500, 500, 500], duration: 0 });
+    map.getView().fit(extent, { padding: [200, 200, 200, 200], duration: 0 });
   }
 
   return layer;

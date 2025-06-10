@@ -14,37 +14,37 @@ import case6 from "@/data/geojson/case6.json";
 const cases = [
   {
     id: 1,
-    title: "Typhoon Case",
+    title: case1.features[0].properties.LocationDescription || "Case 1",
     featureId: "case1",
     geometry: case1.features[0].geometry,
   },
   {
     id: 2,
-    title: "Earthquake",
+    title: case2.features[0].properties.LocationDescription || "Case 2",
     featureId: "case2",
     geometry: case2.features[0].geometry,
   },
   {
     id: 3,
-    title: "Flood Line",
+    title: case3.features[0].properties.LocationDescription || "Case 3",
     featureId: "case3",
     geometry: case3.features[0].geometry,
   },
   {
     id: 4,
-    title: "Evacuation Route",
+    title: case4.features[0].properties.LocationDescription || "Case 4",
     featureId: "case4",
     geometry: case4.features[0].geometry,
   },
   {
     id: 5,
-    title: "Construction Zone",
+    title: case5.features[0].properties.LocationDescription || "Case 5",  
     featureId: "case5",
     geometry: case5.features[0].geometry,
   },
   {
     id: 6,
-    title: "Danger Area",
+    title: case6.features[0].properties.LocationDescription || "Case 6",  
     featureId: "case6",
     geometry: case6.features[0].geometry,
   },

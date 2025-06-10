@@ -73,7 +73,7 @@ const MapPreview = ({ geometry }: MapPreviewProps) => {
         doubleClickZoom={false}
         zoomControl={false}
         attributionControl={false}
-        className="w-full h-100 rounded-lg shadow-md"
+        className="w-full h-100 rounded-lg shadow-md z-0"
       >
         <TileLayer url={tileUrl} />
         <GeoJSON data={geometry} style={setColor} pointToLayer={pointToLayer} />

@@ -2,6 +2,7 @@ import { useState, ReactElement } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as Select from "@radix-ui/react-select";
 import { Car, CloudRainWind, Dam, SquareActivity, Waves } from "lucide-react";
+import { TooltipDemo } from "@/components/ui/Tooltips";
 
 // Vector layers available for switching
 const vectorLayers = [
@@ -40,15 +41,17 @@ export default function ContextLayerSwitcher({ context, setContext, onChangeLaye
         className="bg-primary text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md"
       >
         <AnimatePresence mode="wait">
-          <motion.span
-            key={selectedIndex}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.2 }}
-          >
-            {selectedIcon}
-          </motion.span>
+          <TooltipDemo tooltip={vectorLayers[selectedIndex].label}>
+            <motion.span
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+            >
+              {selectedIcon}
+            </motion.span>
+          </TooltipDemo>
         </AnimatePresence>
       </Select.Trigger>
     </Select.Root>

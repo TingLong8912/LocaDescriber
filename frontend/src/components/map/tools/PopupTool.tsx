@@ -29,12 +29,7 @@ const PopupTool = () => {
       const feature = map.forEachFeatureAtPixel(evt.pixel, (f) => f);
       if (feature) {
         const props = feature.getProperties();
-        // const content = Object.entries(props)
-        //   .filter(([key]) => key !== "geometry")
-        //   .map(([key, value]) => `<tr><td>${key}</td><td>${value}</td></tr>`)
-        //   .join("");
-        // setPopupContent(`<table class="text-sm">${content}</table>`);
-        setPopupContent(`<table class="text-sm">TEST</table>`);
+        setPopupContent(props.LocationDescription);
         setPopupCoord(evt.coordinate);
         overlay.setPosition(evt.coordinate);
       } else {
@@ -54,7 +49,7 @@ const PopupTool = () => {
     <div
       ref={popupRef}
       id="popup"
-      className="bg-white border border-gray-300 shadow-md rounded p-2 absolute z-10"
+      className="bg-card border border-border shadow-xl/10 rounded-md p-5 absolute z-10 text-md w-100 max-w-100"
       style={{ position: "absolute", minWidth: "200px", pointerEvents: "auto" }}
       dangerouslySetInnerHTML={popupContent ? { __html: popupContent } : undefined}
     />

@@ -1,9 +1,16 @@
 {
-"type": "FeatureCollection",
-"name": "汐止交流道",
-"features": [
-{ "type": "Feature", "properties": { }, "geometry": { "type": "Point", "coordinates": [ 121.638638354461577, 25.071012149644048 ] } },
-{ "type": "Feature", "properties": { }, "geometry": null },
-{ "type": "Feature", "properties": { }, "geometry": null }
-]
+  "type": "FeatureCollection",
+  "name": "汐止交流道",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "LocationDescription": "Near the 12.1 km mark of the Sun Yat-sen Freeway (the Xizhi System Interchange)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.638638354461577, 25.071012149644048]
+      }
+    }
+  ]
 }

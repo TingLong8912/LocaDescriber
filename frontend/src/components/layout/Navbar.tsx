@@ -1,7 +1,7 @@
 'use client';
 
 import { IconBtn } from '@/components/ui/IconBtn';
-import { ChevronRight, Menu, Moon, PanelLeftDashed, PanelLeftOpen, Sun } from 'lucide-react';
+import { PanelRightOpen, PanelRightDashed, Moon, PanelLeftDashed, PanelLeftOpen, Sun } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 interface NavbarProps {
@@ -28,22 +28,21 @@ export function Navbar({
         />
         <img src="/logo.svg" alt="LocaDescriber Logo" className="h-8" />
       </div>
-      <div>
-        {pathname !== '/home' && (
-          <button
-            onClick={() => setIsEventPanelOpen(!isEventPanelOpen)}
-            className="text-sm px-3 py-1 bg-muted rounded hover:bg-muted/80"
-          >
-            {isEventPanelOpen ? 'Hide Panel' : 'Show Panel'}
-          </button>
-        )}
+      <div className='flex items-center space-x-4'>
         <IconBtn
-          icon={<Sun />}
-          hoverIcon={<Moon />}
+          icon={<Sun size={20} />}
+          hoverIcon={<Moon size={20} />}
           onClick={() => {
             document.documentElement.classList.toggle('dark');
           }}
         />
+        {pathname !== '/home' && (
+          <IconBtn
+            icon={<PanelRightDashed size={20} />}
+            hoverIcon={<PanelRightOpen size={20} />}
+            onClick={() => setIsEventPanelOpen(!isEventPanelOpen)}
+          />
+        )}
       </div>
     </header>
   );

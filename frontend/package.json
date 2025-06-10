@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@microsoft/fetch-event-source": "^2.0.1",
     "@mui/material": "^7.0.2",
     "@mui/x-date-pickers": "^8.2.0",
     "@radix-ui/react-slot": "^1.2.0",
@@ -23,6 +24,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cytoscape": "^3.32.0",
+    "event-source-polyfill": "^1.0.31",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.488.0",
     "motion": "^12.9.2",

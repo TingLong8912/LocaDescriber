@@ -10,6 +10,7 @@ import { useMapContext } from "@/context/MapContext";
 import { IconBtn } from "@/components/ui/IconBtn";
 import { FileInput, MapPin, Pen, Spline, SquareMousePointer, SquareRoundCorner, X } from "lucide-react";
 import * as Select from "@radix-ui/react-select";
+import { TooltipDemo } from "@/components/ui/Tooltips";
 
 // OpenLayers does not export GeometryType, so define it manually
 type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "None";
@@ -90,15 +91,17 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
           className="bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md"
         >
           <AnimatePresence mode="wait">
-            <motion.span
-              key={drawType}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.2 }}
-            >
-              {selected?.icon}
-            </motion.span>
+            <TooltipDemo tooltip={selected ? selected.label : "Select Draw Type"}>
+              <motion.span
+                key={drawType}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.2 }}
+              >
+                {selected?.icon}
+              </motion.span>
+            </TooltipDemo>
           </AnimatePresence>
         </Select.Trigger>
       </Select.Root>
