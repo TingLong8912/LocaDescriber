@@ -6,21 +6,11 @@ variables:
   IMAGE_NAME_FRONTEND: "dkr.tw/sgis/locadescriber:frontend"
   VERSION: "latest"
 
-build_backend:
-  stage: build
-  script:
-    - docker pull node:latest
-    - docker build -f image/src/backend/Dockerfile -t $IMAGE_NAME_BACKEND-$VERSION image/src/backend
-    - docker push $IMAGE_NAME_BACKEND-$VERSION
-    - docker system prune -f --volumes || echo "Cleanup skipped"
-  tags:
-    - sgis-zone101
-
 build_frontend:
   stage: build
   script:
     - docker pull node:latest
-    - docker build -f image/src/frontend/Dockerfile -t $IMAGE_NAME_FRONTEND-$VERSION image/src/frontend
+    - docker build -f frontend/src/frontend/Dockerfile -t $IMAGE_NAME_FRONTEND-$VERSION frontend/src/frontend
     - docker push $IMAGE_NAME_FRONTEND-$VERSION
     - docker system prune -f --volumes || echo "Cleanup skipped"
   tags:
