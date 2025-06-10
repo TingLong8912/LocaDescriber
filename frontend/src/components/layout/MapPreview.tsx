@@ -35,17 +35,6 @@ const MapPreview = ({ geometry }: MapPreviewProps) => {
       shadowUrl: '',
     });
 
-    const markerIcon2x = require("leaflet/dist/images/marker-icon-2x.png");
-    const markerIcon = require("leaflet/dist/images/marker-icon.png");
-    const markerShadow = require("leaflet/dist/images/marker-shadow.png");
-
-    delete (L.Icon.Default.prototype as any)._getIconUrl;
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl: markerIcon2x,
-      iconUrl: markerIcon,
-      shadowUrl: markerShadow,
-    });
-
     const tileUrl = window.location.href.includes("dark")
       ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
