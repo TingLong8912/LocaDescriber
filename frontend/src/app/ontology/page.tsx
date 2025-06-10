@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, useMemo } from "react";
 import { ReactFlowProvider } from "reactflow";
 import ReactFlow, {
   Background,
@@ -75,6 +75,8 @@ export function OntologyPage() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+
   const { setViewport } = useReactFlow();
 
   useEffect(() => {
@@ -87,25 +89,74 @@ export function OntologyPage() {
       });
   }, []);
 
+  const onNodeClick = useCallback((_event, node) => {
+    setSelectedNodeId((prev) => (prev === node.id ? null : node.id));
+  }, []);
+
+  const highlightedEdges = useMemo(() => {
+    if (!selectedNodeId) return edges;
+    return edges.map((edge) => ({
+      ...edge,
+      className:
+        edge.source === selectedNodeId || edge.target === selectedNodeId
+          ? "stroke-highlight"
+          : "stroke-muted",
+    }));
+  }, [selectedNodeId, edges]);
+
+  const highlightedNodes = useMemo(() => {
+    if (!selectedNodeId) return nodes;
+    const connectedNodeIds = new Set(
+      edges
+        .filter((e) => e.source === selectedNodeId || e.target === selectedNodeId)
+        .flatMap((e) => [e.source, e.target])
+    );
+    return nodes.map((node) => ({
+      ...node,
+      className: connectedNodeIds.has(node.id) ? "highlight" : "muted",
+    }));
+  }, [selectedNodeId, nodes, edges]);
+
   return (
-    <div className="w-full h-full">
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        fitView
-        fitViewOptions={{ padding: 0.5 }}
-        defaultViewport={{ x: 0, y: 0, zoom: 15 }}
-        nodesDraggable={false}
-        nodesConnectable={false}
-        elementsSelectable={false}
-      >
-        <MiniMap />
-        <Controls />
-        <Background />
-      </ReactFlow>
-    </div>
+    <>
+      <style>{`
+        .muted {
+          opacity: 0.3;
+        }
+        .highlight {
+          opacity: 1;
+          stroke: #0070f3;
+          stroke-width: 2px;
+        }
+        .stroke-muted {
+          stroke: #999 !important;
+          opacity: 0.2 !important;
+        }
+        .stroke-highlight {
+          stroke: #0070f3 !important;
+          opacity: 1 !important;
+        }
+      `}</style>
+      <div className="w-full h-full">
+        <ReactFlow
+          nodes={highlightedNodes}
+          edges={highlightedEdges}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          fitView
+          fitViewOptions={{ padding: 0.5 }}
+          defaultViewport={{ x: 0, y: 0, zoom: 15 }}
+          nodesDraggable={false}
+          nodesConnectable={false}
+          elementsSelectable={false}
+          onNodeClick={onNodeClick}
+        >
+          <MiniMap />
+          <Controls />
+          <Background />
+        </ReactFlow>
+      </div>
+    </>
   );
 }
 

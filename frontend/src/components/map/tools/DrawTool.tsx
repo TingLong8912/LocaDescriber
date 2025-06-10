@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Feature from "ol/Feature";
+import Point from "ol/geom/Point";
+import { fromLonLat } from "ol/proj";
+import GeoJSON from "ol/format/GeoJSON";
 import { motion, AnimatePresence } from "framer-motion";
 import { Draw } from "ol/interaction";
 import { createBox } from "ol/interaction/Draw";
@@ -8,13 +12,13 @@ import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
 import { useMapContext } from "@/context/MapContext";
 import { IconBtn } from "@/components/ui/IconBtn";
-import { FileInput, MapPin, Pen, Spline, SquareMousePointer, SquareRoundCorner, X } from "lucide-react";
+import { FileInput, FileUp, MapPin, Parentheses, Pen, Spline, SquareMousePointer, SquareRoundCorner, X } from "lucide-react";
 import * as Select from "@radix-ui/react-select";
 import { TooltipDemo } from "@/components/ui/Tooltips";
 import { useProgress } from "@/context/ProgressContext";
 
 // OpenLayers does not export GeometryType, so define it manually
-type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "None";
+type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "Text" | "GeoJSON" | "None";
 
 const drawSource = new VectorSource();
 const drawLayer = new VectorLayer({
@@ -25,6 +29,8 @@ const geometryOptions = [
   { id: "Point", label: "Point", icon: <MapPin /> },
   { id: "LineString", label: "Line", icon: <Spline /> },
   { id: "Polygon", label: "Polygon", icon: <SquareRoundCorner /> },
+  { id: "Text", label: "Text", icon: <Parentheses /> },
+  { id: "GeoJSON", label: "GeoJSON", icon: <FileUp /> },
   { id: "None", label: "Cancel", icon: <X /> },
 ];
 
@@ -36,6 +42,11 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
   const [pendingFeature, setPendingFeature] = useState<any | null>(null);
   const [drawType, setDrawType] = useState<GeometryType>("None");
 
+  const [showTextModal, setShowTextModal] = useState(false);
+  const [showGeoJSONModal, setShowGeoJSONModal] = useState(false);
+
+  const isCustomType = (type: GeometryType) => type === "Text" || type === "GeoJSON";
+
   useEffect(() => {
     if (!map) return;
     
@@ -45,7 +56,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
 
     let draw: Draw | null = null;
 
-    if (drawType !== "None") {
+    if (drawType !== "None" && !isCustomType(drawType)) {
       draw = new Draw({
         source: drawSource,
         type: drawType === "Box" ? "Circle" : drawType,
@@ -73,6 +84,12 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
     if (drawType !== "None") {
       setIsDrawing(true);
     }
+    if (drawType === "Text") {
+      setShowTextModal(true);
+    }
+    if (drawType === "GeoJSON") {
+      setShowGeoJSONModal(true);
+    }
 
     return () => {
       if (draw) map.removeInteraction(draw);
@@ -91,9 +108,11 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
 
   const cycleDrawType = () => {
     const currentIndex = geometryOptions.findIndex((opt) => opt.id === drawType);
-    const nextIndex = (currentIndex + 1) % geometryOptions.length;
-    const nextType = geometryOptions[nextIndex].id as GeometryType;
+    let nextIndex = (currentIndex + 1) % geometryOptions.length;
+    let nextType = geometryOptions[nextIndex].id as GeometryType;
     setDrawType(nextType);
+    setShowTextModal(false);
+    setShowGeoJSONModal(false);
   };
 
   return (
@@ -121,8 +140,65 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
           </AnimatePresence>
         </Select.Trigger>
       </Select.Root>
-
-      <IconBtn icon={<FileInput />} hoverIcon={<FileInput />} />
+      {showTextModal && (
+        <div className="absolute -top-30 left-1/2 transform -translate-x-1/2 w-100 bg-background border p-4 rounded shadow-md z-50">
+          <h3 className="font-semibold mb-2">Enter Coordinates (lon, lat):</h3>
+          <input
+            type="text"
+            className="w-full mb-2 px-2 py-1 border rounded"
+            placeholder="e.g. 121.5, 25.05"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                const [lon, lat] = (e.currentTarget.value || "").split(",").map(Number);
+                if (!isNaN(lon) && !isNaN(lat)) {
+                  const feature = new Feature({
+                    geometry: new Point(fromLonLat([lon, lat])),
+                  });
+                  drawSource.clear();
+                  drawSource.addFeature(feature);
+                  setPendingFeature(feature);
+                  setDrawType("None");
+                  setShowTextModal(false);
+                }
+              }
+            }}
+          />
+          <button onClick={() => setShowTextModal(false)} className="mt-2 text-sm underline">Cancel</button>
+        </div>
+      )}
+      {showGeoJSONModal && (
+        <div className="absolute -top-30 left-1/2 transform -translate-x-1/2 w-100 bg-background border p-4 rounded shadow-md z-50">
+          <h3 className="font-semibold mb-2">Upload GeoJSON:</h3>
+          <input
+            type="file"
+            accept=".geojson,application/geo+json"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                  try {
+                    const geojson = JSON.parse(reader.result as string);
+                    const format = new GeoJSON();
+                    const features = format.readFeatures(geojson, {
+                      featureProjection: "EPSG:3857",
+                    });
+                    drawSource.clear();
+                    drawSource.addFeatures(features);
+                    if (features.length > 0) setPendingFeature(features[0]);
+                    setDrawType("None");
+                    setShowGeoJSONModal(false);
+                  } catch (err) {
+                    alert("Invalid GeoJSON");
+                  }
+                };
+                reader.readAsText(file);
+              }
+            }}
+          />
+          <button onClick={() => setShowGeoJSONModal(false)} className="mt-2 text-sm underline">Cancel</button>
+        </div>
+      )}
     </div>
   );
 };

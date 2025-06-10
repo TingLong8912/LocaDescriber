@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { fromLonLat, toLonLat } from "ol/proj";
 import { useMapContext } from "@/context/MapContext";
 import Map from "ol/Map";
@@ -16,8 +17,6 @@ import VectorLayer from "ol/layer/Vector";
 import { DrawTool } from "./tools/DrawTool";
 import GeoJSON from "ol/format/GeoJSON";
 import Feature from "ol/Feature";
-import { EyeOff } from "lucide-react";
-import { TooltipDemo } from "@/components/ui/Tooltips";
 import { createInputLayer } from "./layers/InputLayer";
 import { defaults as defaultInteractions } from "ol/interaction";
 import { useRunStreamingLocationDescription } from "@/hooks/useRunStreamingLocationDescription";
@@ -25,6 +24,7 @@ import { useRunStreamingLocationDescription } from "@/hooks/useRunStreamingLocat
 export const MapViewer = ({ featureId }: { featureId?: string }) => {
   const [context, setContext] = useState<string>("Traffic"); // Example context state
   const [geojson, setGeojson] = useState<JSON | null>(null);
+  const [hovered, setHovered] = useState(false);
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapObjectRef = useRef<Map | null>(null);
   const { setMap } = useMapContext();
@@ -88,30 +88,6 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
         }
       }
 
-      // const roadLayer = new VectorLayer({
-      //   source: new VectorSource(),
-      //   style: new Style({ stroke: new Stroke({ color: "red", width: 2 }) }),
-      //   visible: false,
-      // });
-      // const buildingLayer = new VectorLayer({
-      //   source: new VectorSource(),
-      //   style: new Style({ stroke: new Stroke({ color: "blue", width: 2 }) }),
-      //   visible: false,
-      // });
-      // const landmarkLayer = new VectorLayer({
-      //   source: new VectorSource(),
-      //   style: new Style({ stroke: new Stroke({ color: "green", width: 2 }) }),
-      //   visible: false,
-      // });
-
-      // map.addLayer(roadLayer);
-      // map.addLayer(buildingLayer);
-      // map.addLayer(landmarkLayer);
-
-      // layerRefs.current["roads"] = roadLayer;
-      // layerRefs.current["buildings"] = buildingLayer;
-      // layerRefs.current["landmarks"] = landmarkLayer;
-
       mapObjectRef.current = map;
       setMap(map);
     }
@@ -164,12 +140,26 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
       <ToolContainer>
         {featureId ? (
           <div className="flex items-center justify-between">
-            <span className="mr-2 px-4 py-2 rounded-md bg-primary-a text-primary-foreground">View Case Only</span>
-            <TooltipDemo tooltip="Exit Preview Mode">
-              <a href="/map">
-                <EyeOff />
-              </a>
-            </TooltipDemo>
+            <motion.a
+              href="/map"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+              className="flex items-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.span
+                key={hovered ? "exit" : "view"}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.3 }}
+                className="mr-2 px-4 py-2 rounded-md bg-primary-a text-primary-foreground"
+              >
+                {hovered ? "Exit Preview Mode" : "View Case Only"}
+              </motion.span>
+            </motion.a>
           </div>
         ) : (
           <>
