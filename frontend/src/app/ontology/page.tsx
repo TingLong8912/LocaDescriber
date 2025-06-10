@@ -11,6 +11,7 @@ import ReactFlow, {
   Node,
   Edge,
   Position,
+  MarkerType
 } from "reactflow";
 import { useReactFlow } from "reactflow";
 import "reactflow/dist/style.css";
@@ -71,7 +72,15 @@ function InnerOntologyPage() {
     hidden: !!node.data.parent,
   }));
 
-  const initialEdges: Edge[] = elements.edges;
+  const initialEdges: Edge[] = elements.edges.map((edge: any) => ({
+    ...edge,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      width: 20,
+      height: 20,
+      color: "#22222",
+    },
+  }));
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -83,11 +92,11 @@ function InnerOntologyPage() {
   useEffect(() => {
     const { nodes: layoutedNodes } = getLayoutedElements(nodes, edges);
     setNodes(layoutedNodes);
-      setViewport({
-        x: 20,
-        y: 20,
-        zoom: 2.5,
-      });
+    setViewport({
+      x: 20,
+      y: 20,
+      zoom: 2.5,
+    });
   }, []);
 
   const onNodeClick = useCallback((_event: React.MouseEvent, node: Node) => {

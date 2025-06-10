@@ -19,7 +19,7 @@ export default function SidebarItem({ label, href, icon, actived, onClick }: Sid
 
   return (
     <li
-      className={`relative px-5 py-2 transition-colors duration-200 flex items-center ${
+      className={`relative px-5 py-2 transition-colors duration-200 flex items-center rounded-md ${
         progressStatus === 'running'
           ? 'cursor-not-allowed opacity-50'
           : 'cursor-pointer'

@@ -36,7 +36,7 @@ export function Navbar({
             document.documentElement.classList.toggle('dark');
           }}
         />
-        {pathname !== '/home' && (
+        {pathname !== '/home' && pathname !== "/ontology" && (
           <IconBtn
             icon={<PanelRightDashed size={20} />}
             hoverIcon={<PanelRightOpen size={20} />}

@@ -40,6 +40,32 @@ export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
 function SidebarContent({ onClose }: { onClose: () => void }) {
   const { steps } = useProgress();
+  const lastStep = steps.length > 0 ? steps[steps.length - 1] : undefined;
+  let multiLocadResults: string[] = [];
+  if (lastStep?.details) {
+    try {
+      const obj = JSON.parse(lastStep.details);
+      if (obj && Array.isArray(obj.multiLocad_results)) {
+        multiLocadResults = obj.multiLocad_results;
+      }
+    } catch (e) {
+      // fallback: 只顯示 details
+      multiLocadResults = [lastStep.details];
+    }
+  }
+  const [resultIndex, setResultIndex] = useState(0);
+  const finalResult = multiLocadResults[resultIndex] || "";
+
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    if (finalResult) {
+      navigator.clipboard.writeText(finalResult);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    }
+  };
+
+  const hasOtherResults = multiLocadResults.length > 1;
 
   return (
     <div className="flex flex-col h-full overflow-y-auto">
@@ -49,6 +75,42 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
           <Step key={i} label={step.label} status={step.status} details={step.details} />
         ))}
       </div>
+      {finalResult && (
+        <div className="mt-5 mx-2 p-2 border rounded-md bg-primary text-primary-foreground">
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-md h-10 px-3 font-semibold flex items-center">
+              Result{hasOtherResults ? ` (${resultIndex + 1}/${multiLocadResults.length})` : ""}
+            </span>
+            {hasOtherResults && (
+              <div className="flex gap-1">
+                <button
+                  className="text-xs px-2 py-1 rounded bg-muted-foreground text-muted hover:bg-primary/80"
+                  onClick={() => setResultIndex((i) => (i - 1 + multiLocadResults.length) % multiLocadResults.length)}
+                  disabled={resultIndex === 0}
+                >
+                  Prev
+                </button>
+                <button
+                  className="text-xs px-2 py-1 rounded bg-muted-foreground text-muted hover:bg-primary/80"
+                  onClick={() => setResultIndex((i) => (i + 1) % multiLocadResults.length)}
+                  disabled={resultIndex === multiLocadResults.length - 1}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </div>
+          <pre className="p-2 whitespace-pre-wrap text-lg max-h-40 overflow-auto">{finalResult}</pre>
+          <div>
+            <button
+              className="text-xs px-2 py-1 rounded bg-muted-foreground text-muted hover:bg-primary/80"
+              onClick={handleCopy}
+            >
+              {copied ? "Copied!" : "Copy"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

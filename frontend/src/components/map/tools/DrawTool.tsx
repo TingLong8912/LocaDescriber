@@ -11,11 +11,11 @@ import { createBox } from "ol/interaction/Draw";
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
 import { useMapContext } from "@/context/MapContext";
-import { IconBtn } from "@/components/ui/IconBtn";
-import { FileInput, FileUp, MapPin, Parentheses, Pen, Spline, SquareMousePointer, SquareRoundCorner, X } from "lucide-react";
+import { FileUp, MapPin, Parentheses, Spline, SquareRoundCorner, X } from "lucide-react";
 import * as Select from "@radix-ui/react-select";
 import { TooltipDemo } from "@/components/ui/Tooltips";
 import { useProgress } from "@/context/ProgressContext";
+import { ControllModal } from "@/components/ui/ControllModal";
 
 // OpenLayers does not export GeometryType, so define it manually
 type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "Text" | "GeoJSON" | "None";
@@ -49,7 +49,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
 
   useEffect(() => {
     if (!map) return;
-    
+
     if (!map.getLayers().getArray().includes(drawLayer)) {
       map.addLayer(drawLayer);
     }
@@ -121,9 +121,8 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
         <Select.Trigger
           onClick={cycleDrawType}
           disabled={progressStatus === "running"}
-          className={`bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md ${
-            progressStatus === "running" ? "cursor-not-allowed opacity-50" : ""
-          }`}
+          className={`bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md ${progressStatus === "running" ? "cursor-not-allowed opacity-50" : ""
+            }`}
         >
           <AnimatePresence mode="wait">
             <TooltipDemo tooltip={selected ? selected.label : "Select Draw Type"}>
@@ -141,8 +140,11 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
         </Select.Trigger>
       </Select.Root>
       {showTextModal && (
-        <div className="absolute -top-30 left-1/2 transform -translate-x-1/2 w-100 bg-background border p-4 rounded shadow-md z-50">
-          <h3 className="font-semibold mb-2">Enter Coordinates (lon, lat):</h3>
+        <ControllModal
+          open={showTextModal}
+          onClose={() => setShowTextModal(false)}
+          title="Enter Coordinates (lon, lat)"
+        >
           <input
             type="text"
             className="w-full mb-2 px-2 py-1 border rounded"
@@ -159,16 +161,21 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
                   setPendingFeature(feature);
                   setDrawType("None");
                   setShowTextModal(false);
+                  if (onDrawEnd) {
+                    onDrawEnd(feature.getGeometry());
+                  }
                 }
               }
             }}
           />
-          <button onClick={() => setShowTextModal(false)} className="mt-2 text-sm underline">Cancel</button>
-        </div>
+        </ControllModal>
       )}
       {showGeoJSONModal && (
-        <div className="absolute -top-30 left-1/2 transform -translate-x-1/2 w-100 bg-background border p-4 rounded shadow-md z-50">
-          <h3 className="font-semibold mb-2">Upload GeoJSON:</h3>
+        <ControllModal
+          open={showGeoJSONModal}
+          onClose={() => setShowGeoJSONModal(false)}
+          title="Upload GeoJSON"
+        >
           <input
             type="file"
             accept=".geojson,application/geo+json"
@@ -188,6 +195,9 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
                     if (features.length > 0) setPendingFeature(features[0]);
                     setDrawType("None");
                     setShowGeoJSONModal(false);
+                    if (onDrawEnd) {
+                      onDrawEnd(features[0].getGeometry());
+                    }
                   } catch (err) {
                     alert("Invalid GeoJSON");
                   }
@@ -196,8 +206,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
               }
             }}
           />
-          <button onClick={() => setShowGeoJSONModal(false)} className="mt-2 text-sm underline">Cancel</button>
-        </div>
+        </ControllModal>
       )}
     </div>
   );

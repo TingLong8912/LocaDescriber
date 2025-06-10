@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useProgress } from "@/context/ProgressContext";
 import { streamLocationDescription } from "@/lib/api";
 
-export function useRunStreamingLocationDescription(geojson: JSON, context: string) {
+export function useRunStreamingLocationDescription(geojson: JSON | null, context: string) {
   const { setSteps, setProgressStatus } = useProgress();
   const [templateData, setTemplateData] = useState<any | null>(null);
 

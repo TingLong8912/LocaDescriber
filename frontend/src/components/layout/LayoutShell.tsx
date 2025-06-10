@@ -15,7 +15,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = usePersistentState('sidebar-open', false);
   const [isEventPanelOpen, setIsEventPanelOpen] = usePersistentState('eventpanel-open', false);
   const pathname = usePathname();
-  const showPanel = pathname !== '/home';
+  const showPanel = pathname !== '/home' && pathname !== '/ontology';
 
   const { steps } = useProgress();
 

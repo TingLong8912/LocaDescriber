@@ -67,7 +67,7 @@ export default function CaseGrid() {
 
   return (
     <div className="mx-auto">
-      <div ref={containerRef} className="flex space-x-4 py-15 overflow-x-auto scrollbar-hide">
+      <div ref={containerRef} className="flex space-x-4 py-15 px-10 overflow-x-auto scrollbar-hide">
         {cases.map(({ id, title, featureId, geometry }) => (
           <Link key={id} href={`/map?featureId=${featureId}`}>
             <MapCard id={id} title={title} geometry={geometry as Geometry} />
@@ -79,7 +79,7 @@ export default function CaseGrid() {
           <button
             key={c.id}
             onClick={() => setActiveCardId(c.id)}
-            className={`w-5 h-5 rounded-full ${activeCardId === c.id ? "bg-muted-foreground" : "bg-muted"}`}
+            className={`w-5 h-5 rounded-full ${activeCardId === c.id ? "bg-primary" : "bg-muted"}`}
           />
         ))}
       </div>
