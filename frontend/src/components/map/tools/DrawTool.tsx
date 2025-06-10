@@ -11,6 +11,7 @@ import { IconBtn } from "@/components/ui/IconBtn";
 import { FileInput, MapPin, Pen, Spline, SquareMousePointer, SquareRoundCorner, X } from "lucide-react";
 import * as Select from "@radix-ui/react-select";
 import { TooltipDemo } from "@/components/ui/Tooltips";
+import { useProgress } from "@/context/ProgressContext";
 
 // OpenLayers does not export GeometryType, so define it manually
 type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "None";
@@ -29,6 +30,10 @@ const geometryOptions = [
 
 export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void }) => {
   const { map, setIsDrawing } = useMapContext();
+  const { steps } = useProgress();
+  const templateStep = steps.find((s) => s.label === "Template generation");
+  const templateData = templateStep?.details ? JSON.parse(templateStep.details) : null;
+  const [pendingFeature, setPendingFeature] = useState<any | null>(null);
   const [drawType, setDrawType] = useState<GeometryType>("None");
 
   useEffect(() => {
@@ -37,24 +42,25 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
     if (!map.getLayers().getArray().includes(drawLayer)) {
       map.addLayer(drawLayer);
     }
-    
+
     let draw: Draw | null = null;
 
     if (drawType !== "None") {
       draw = new Draw({
         source: drawSource,
-        type: drawType === "Box" ? "Circle" : drawType, 
+        type: drawType === "Box" ? "Circle" : drawType,
         geometryFunction: drawType === "Box" ? createBox() : undefined,
       });
 
       draw.on('drawend', (event) => {
         drawSource.clear();
         const geometry = event.feature.getGeometry();
+        setPendingFeature(event.feature);
         if (onDrawEnd) {
           onDrawEnd(geometry);
         }
 
-        if (draw) { 
+        if (draw) {
           map.removeInteraction(draw);
           setDrawType("None");
           setIsDrawing(false);
@@ -73,6 +79,13 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
       setIsDrawing(false);
     };
   }, [map, drawType, onDrawEnd, setIsDrawing]);
+
+  useEffect(() => {
+    if (pendingFeature && templateData) {
+      pendingFeature.setProperties({ "LocationDescription": templateData[0] });
+      setPendingFeature(null);
+    }
+  }, [pendingFeature, templateData]);
 
   const selected = geometryOptions.find((opt) => opt.id === drawType);
 

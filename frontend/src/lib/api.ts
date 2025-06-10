@@ -52,14 +52,12 @@ export const streamLocationDescription = async (
         console.log('SSE connection opened (fetch-event-source)', response)
       },
       onmessage(msg) {
-        console.log('[SSE] message received:', msg.data)
         if (msg.event === 'error') {
           console.error('[SSE] error event received:', msg.data)
           return
         }
         try {
           const data = JSON.parse(msg.data)
-          console.log('[SSE] parsed data:', data)
           onMessage(data)
         } catch (err) {
           console.error('[SSE] JSON parse error:', err)

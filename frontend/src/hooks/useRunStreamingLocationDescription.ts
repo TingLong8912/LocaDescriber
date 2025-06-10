@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useProgress } from "@/context/ProgressContext";
 import { streamLocationDescription } from "@/lib/api";
 
 export function useRunStreamingLocationDescription(geojson: JSON, context: string) {
   const { setSteps } = useProgress();
+  const [templateData, setTemplateData] = useState<any | null>(null);
 
   useEffect(() => {
     if (!geojson || !context) return;
@@ -40,6 +41,10 @@ export function useRunStreamingLocationDescription(geojson: JSON, context: strin
               : step
           )
         );
+
+        if (data.stage === "Template generation" && data.result) {
+          setTemplateData(data.result);
+        }
       }
     ).then(controller => {
       abortController = controller;
@@ -49,4 +54,6 @@ export function useRunStreamingLocationDescription(geojson: JSON, context: strin
       abortController?.abort();
     };
   }, [geojson, context, setSteps]);
+
+  return { templateData };
 }
