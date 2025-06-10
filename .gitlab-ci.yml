@@ -10,7 +10,7 @@ build_frontend:
   stage: build
   script:
     - docker pull node:latest
-    - docker build -f frontend/Dockerfile -t $IMAGE_NAME_FRONTEND-$VERSION src/frontend
+    - docker build -f frontend/Dockerfile -t $IMAGE_NAME_FRONTEND-$VERSION frontend/src
     - docker push $IMAGE_NAME_FRONTEND-$VERSION
     - docker system prune -f --volumes || echo "Cleanup skipped"
   tags:
