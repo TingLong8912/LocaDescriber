@@ -7,10 +7,11 @@ import { EventPanel } from '@/components/layout/EventPanel';
 import { usePersistentState } from '@/hooks/usePersistentState';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useProgress } from '@/context/ProgressContext';
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
+  const [isReady, setIsReady] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = usePersistentState('sidebar-open', false);
   const [isEventPanelOpen, setIsEventPanelOpen] = usePersistentState('eventpanel-open', false);
   const pathname = usePathname();
@@ -23,6 +24,14 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       setIsEventPanelOpen(true);
     }
   }, [steps]);
+
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
+
+  if (!isReady) {
+    return null;
+  }
 
   return (
     <div className="relative h-full w-full min-h-screen overflow-hidden">

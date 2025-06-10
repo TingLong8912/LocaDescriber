@@ -1,7 +1,7 @@
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
 import GeoJSON from "ol/format/GeoJSON";
-import { Style, Stroke } from "ol/style";
+import { Style, Stroke, Text, Fill } from "ol/style";
 import { Map } from "ol";
 
 import frameData from "@/data/geojson/frame.json";
@@ -15,12 +15,19 @@ export const createFrameLayer = (map: Map) => {
 
   const layer = new VectorLayer({
     source,
-    style: new Style({
-      stroke: new Stroke({
-        color: "rgba(22,22,22,0.1)",
-        width: 2,
+    style: (feature) =>
+      new Style({
+        stroke: new Stroke({
+          color: "rgba(22,22,22,0.2)",
+          width: 2,
+        }),
+        text: new Text({
+          text: "Study Area",
+          font: "20px Calibri,sans-serif",
+          fill: new Fill({ color: "rgba(22,22,22,0.2)" }),
+          offsetY: -15,
+        }),
       }),
-    }),
   });
 
   if (source.getFeatures().length > 0) {

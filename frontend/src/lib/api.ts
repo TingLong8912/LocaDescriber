@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { fetchEventSource } from '@microsoft/fetch-event-source'
 import { useProgress, StepState } from "@/context/ProgressContext"
+import { Toast } from "@/components/ui/UseToast"
 
 // const API_BASE_URL = 'https://geospatialdescription.sgis.tw/api'
 const API_BASE_URL = 'http://localhost:8000/api'
@@ -61,10 +62,20 @@ export const streamLocationDescription = async (
           onMessage(data)
         } catch (err) {
           console.error('[SSE] JSON parse error:', err)
+          Toast({
+            title: "Data Format Error",
+            description: "Failed to parse server response data.",
+            variant: "destructive",
+          });
         }
       },
       onerror(err) {
         console.error('SSE Error:', err)
+        Toast({
+          title: "Streaming Connection Error",
+          description: "Request failed, please try again later.",
+          variant: "destructive",
+        });
         controller.abort()
         if (onError) onError(err)
       }

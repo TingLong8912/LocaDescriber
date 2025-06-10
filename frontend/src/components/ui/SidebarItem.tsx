@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { useProgress } from '@/context/ProgressContext';
 
 type SidebarItemProps = {
   label: string;
@@ -14,13 +15,25 @@ type SidebarItemProps = {
 export default function SidebarItem({ label, href, icon, actived, onClick }: SidebarItemProps) {
   const pathname = usePathname();
   const isActive = href ? pathname === href : false;
+  const { progressStatus } = useProgress();
 
   return (
     <li
-      className={`relative cursor-pointer rounded-md px-5 py-2 transition-colors duration-200 flex items-center ${
+      className={`relative px-5 py-2 transition-colors duration-200 flex items-center ${
+        progressStatus === 'running'
+          ? 'cursor-not-allowed opacity-50'
+          : 'cursor-pointer'
+      } ${
         actived || isActive ? 'bg-muted' : 'hover:bg-muted/60'
       }`}
-      onClick={onClick ? onClick : () => href && (window.location.href = href)}
+      title={progressStatus === 'running' ? 'Cannot switch page during an active process.' : ''}
+      onClick={
+        progressStatus === 'running'
+          ? undefined
+          : onClick
+          ? onClick
+          : () => href && (window.location.href = href)
+      }
     >
       <>
         {icon}

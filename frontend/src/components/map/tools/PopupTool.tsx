@@ -49,7 +49,7 @@ const PopupTool = () => {
     <div
       ref={popupRef}
       id="popup"
-      className="bg-card border border-border shadow-xl/10 rounded-md p-5 absolute z-10 text-md w-100 max-w-100"
+      className="bg-card border border-border shadow-xl/10 rounded-md p-5 absolute z-10 text-md w-auto max-w-[90vw]"
       style={{ position: "absolute", minWidth: "200px", pointerEvents: "auto" }}
       dangerouslySetInnerHTML={popupContent ? { __html: popupContent } : undefined}
     />

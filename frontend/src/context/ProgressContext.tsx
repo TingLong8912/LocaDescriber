@@ -11,6 +11,8 @@ export interface StepState {
 interface ProgressContextType {
   steps: StepState[];
   setSteps: React.Dispatch<React.SetStateAction<StepState[]>>;
+  progressStatus: 'idle' | 'running' | 'completed';
+  setProgressStatus: React.Dispatch<React.SetStateAction<'idle' | 'running' | 'completed'>>;
 }
 
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
@@ -25,9 +27,10 @@ export const useProgress = (): ProgressContextType => {
 
 export const ProgressProvider = ({ children }: { children: ReactNode }) => {
   const [steps, setSteps] = useState<StepState[]>([]);
+  const [progressStatus, setProgressStatus] = useState<'idle' | 'running' | 'completed'>('idle');
 
   return (
-    <ProgressContext.Provider value={{ steps, setSteps }}>
+    <ProgressContext.Provider value={{ steps, setSteps, progressStatus, setProgressStatus }}>
       {children}
     </ProgressContext.Provider>
   );

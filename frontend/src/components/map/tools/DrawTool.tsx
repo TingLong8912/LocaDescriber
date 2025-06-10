@@ -30,7 +30,7 @@ const geometryOptions = [
 
 export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void }) => {
   const { map, setIsDrawing } = useMapContext();
-  const { steps } = useProgress();
+  const { steps, progressStatus } = useProgress();
   const templateStep = steps.find((s) => s.label === "Template generation");
   const templateData = templateStep?.details ? JSON.parse(templateStep.details) : null;
   const [pendingFeature, setPendingFeature] = useState<any | null>(null);
@@ -38,7 +38,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
 
   useEffect(() => {
     if (!map) return;
-
+    
     if (!map.getLayers().getArray().includes(drawLayer)) {
       map.addLayer(drawLayer);
     }
@@ -78,7 +78,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
       if (draw) map.removeInteraction(draw);
       setIsDrawing(false);
     };
-  }, [map, drawType, onDrawEnd, setIsDrawing]);
+  }, [map, drawType, steps, onDrawEnd, setIsDrawing]);
 
   useEffect(() => {
     if (pendingFeature && templateData) {
@@ -101,7 +101,10 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
       <Select.Root>
         <Select.Trigger
           onClick={cycleDrawType}
-          className="bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md"
+          disabled={progressStatus === "running"}
+          className={`bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md ${
+            progressStatus === "running" ? "cursor-not-allowed opacity-50" : ""
+          }`}
         >
           <AnimatePresence mode="wait">
             <TooltipDemo tooltip={selected ? selected.label : "Select Draw Type"}>
