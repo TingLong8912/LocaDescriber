@@ -27,6 +27,14 @@ const MapPreview = ({ geometry }: MapPreviewProps) => {
     require("leaflet/dist/leaflet.css");
 
     const L = require("leaflet");
+    delete (L.Icon.Default.prototype as any)._getIconUrl;
+
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: '',
+      iconUrl: '',
+      shadowUrl: '',
+    });
+
     const markerIcon2x = require("leaflet/dist/images/marker-icon-2x.png");
     const markerIcon = require("leaflet/dist/images/marker-icon.png");
     const markerShadow = require("leaflet/dist/images/marker-shadow.png");
