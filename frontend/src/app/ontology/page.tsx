@@ -10,6 +10,7 @@ import ReactFlow, {
   useNodesState,
   Node,
   Edge,
+  Position,
 } from "reactflow";
 import { useReactFlow } from "reactflow";
 import "reactflow/dist/style.css";
@@ -51,15 +52,15 @@ const getLayoutedElements = (nodes: Node[], edges: Edge[]) => {
         y: nodeWithPosition.y - nodeHeight / 2 + (Math.random() - 0.5) * jitterAmount,
       },
       // React Flow needs this flag to avoid overwriting position by internal logic
-      targetPosition: "top",
-      sourcePosition: "bottom",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
     };
   });
 
   return { nodes: layoutedNodes, edges };
 };
 
-export function OntologyPage() {
+function InnerOntologyPage() {
   const initialNodes: Node[] = elements.nodes.map((node: any) => ({
     ...node,
     type: "default",
@@ -89,7 +90,7 @@ export function OntologyPage() {
       });
   }, []);
 
-  const onNodeClick = useCallback((_event, node) => {
+  const onNodeClick = useCallback((_event: React.MouseEvent, node: Node) => {
     setSelectedNodeId((prev) => (prev === node.id ? null : node.id));
   }, []);
 
@@ -160,10 +161,10 @@ export function OntologyPage() {
   );
 }
 
-export default function OntologyPageWrapper() {
+export default function OntologyPage() {
   return (
     <ReactFlowProvider>
-      <OntologyPage />
+      <InnerOntologyPage />
     </ReactFlowProvider>
   );
 }

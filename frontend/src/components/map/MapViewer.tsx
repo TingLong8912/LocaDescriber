@@ -30,8 +30,12 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
   const { setMap } = useMapContext();
   const layerRefs = useRef<{ [key: string]: VectorLayer<any> }>({});
 
-  useRunStreamingLocationDescription(geojson, context);
-
+  useEffect(() => {
+    if (geojson) {
+      useRunStreamingLocationDescription(geojson, context);
+    }
+  }, [geojson, context]);
+  
   useEffect(() => {
     if (!featureId) return;
 

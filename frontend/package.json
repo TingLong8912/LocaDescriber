@@ -52,6 +52,7 @@
     "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
+    "@types/dagre": "^0.7.52",
     "@types/geojson": "^7946.0.16",
     "@types/leaflet": "^1.9.18",
     "@types/node": "22.15.21",

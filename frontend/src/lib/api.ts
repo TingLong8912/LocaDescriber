@@ -65,7 +65,8 @@ export const streamLocationDescription = async (
           Toast({
             title: "Data Format Error",
             description: "Failed to parse server response data.",
-            variant: "destructive",
+            type: "error",
+            onClose: () => {}
           });
         }
       },
@@ -74,7 +75,8 @@ export const streamLocationDescription = async (
         Toast({
           title: "Streaming Connection Error",
           description: "Request failed, please try again later.",
-          variant: "destructive",
+          type: "error",
+          onClose: () => {}
         });
         controller.abort()
         if (onError) onError(err)

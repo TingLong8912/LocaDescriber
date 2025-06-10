@@ -10,6 +10,7 @@ import case3 from "@/data/geojson/case3.json";
 import case4 from "@/data/geojson/case4.json";
 import case5 from "@/data/geojson/case5.json";
 import case6 from "@/data/geojson/case6.json";
+import type { Geometry } from "geojson";
 
 const cases = [
   {
@@ -69,7 +70,7 @@ export default function CaseGrid() {
       <div ref={containerRef} className="flex space-x-4 py-15 overflow-x-auto scrollbar-hide">
         {cases.map(({ id, title, featureId, geometry }) => (
           <Link key={id} href={`/map?featureId=${featureId}`}>
-            <MapCard id={id} title={title} href={`/map?featureId=${featureId}`} geometry={geometry} />
+            <MapCard id={id} title={title} geometry={geometry as Geometry} />
           </Link>
         ))}
       </div>
