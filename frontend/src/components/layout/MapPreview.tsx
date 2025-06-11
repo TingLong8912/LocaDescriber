@@ -19,6 +19,13 @@ const getCenter = (geometry: Feature<Geometry>): [number, number] => {
 const MapPreview = ({ geometry }: MapPreviewProps) => {
   // Hydration-safe: only render on client
   const [MapComponent, setMapComponent] = useState<React.ReactElement | null>(null);
+  const [theme, setTheme] = useState(() => (typeof window !== "undefined" ? localStorage.getItem("theme") : "light"));
+
+  useEffect(() => {
+    const handler = () => setTheme(localStorage.getItem("theme"));
+    window.addEventListener("storage", handler);
+    return () => window.removeEventListener("storage", handler);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -35,7 +42,7 @@ const MapPreview = ({ geometry }: MapPreviewProps) => {
       shadowUrl: '',
     });
 
-    const tileUrl = window.location.href.includes("dark")
+    const tileUrl = theme === "dark"
       ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
 
@@ -76,7 +83,7 @@ const MapPreview = ({ geometry }: MapPreviewProps) => {
         <GeoJSON data={geometry} style={setColor} pointToLayer={pointToLayer} />
       </MapContainer>
     );
-  }, [geometry]);
+  }, [geometry, theme]);
 
   // On server, or before client effect runs, render nothing
   if (typeof window === "undefined") return null;

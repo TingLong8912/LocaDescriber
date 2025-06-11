@@ -62,6 +62,14 @@ const getLayoutedElements = (nodes: Node[], edges: Edge[]) => {
 };
 
 function InnerOntologyPage() {
+  const [theme, setTheme] = useState(() => (typeof window !== "undefined" ? localStorage.getItem("theme") : "light"));
+  
+    useEffect(() => {
+      const handler = () => setTheme(localStorage.getItem("theme"));
+      window.addEventListener("storage", handler);
+      return () => window.removeEventListener("storage", handler);
+    }, []);
+
   const initialNodes: Node[] = elements.nodes.map((node: any) => ({
     ...node,
     type: "default",
@@ -70,6 +78,7 @@ function InnerOntologyPage() {
       expanded: true,
     },
     hidden: !!node.data.parent,
+    className: theme === 'dark' ? "rf-dark" : "rf-light",
   }));
 
   const initialEdges: Edge[] = elements.edges.map((edge: any) => ({
@@ -84,7 +93,6 @@ function InnerOntologyPage() {
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
 
   const { setViewport } = useReactFlow();
@@ -123,9 +131,12 @@ function InnerOntologyPage() {
     );
     return nodes.map((node) => ({
       ...node,
-      className: connectedNodeIds.has(node.id) ? "highlight" : "muted",
+      className: [
+        connectedNodeIds.has(node.id) ? "highlight" : "muted",
+        theme === 'dark' ? "rf-dark" : "rf-light"
+      ].join(" "),
     }));
-  }, [selectedNodeId, nodes, edges]);
+  }, [selectedNodeId, nodes, edges, theme]);
 
   return (
     <>

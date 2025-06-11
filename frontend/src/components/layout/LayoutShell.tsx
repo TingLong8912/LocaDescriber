@@ -20,6 +20,17 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
   const { steps } = useProgress();
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, []);
+  
+  useEffect(() => {
     if (steps.length > 0) {
       setIsEventPanelOpen(true);
     }

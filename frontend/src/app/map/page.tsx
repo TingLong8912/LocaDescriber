@@ -7,7 +7,7 @@ export default function MapPage() {
   const searchParams = useSearchParams();
   const featureIdParam = searchParams.get('featureId');
   const featureId = featureIdParam === null ? undefined : featureIdParam;
-
+  
   return (
     <>
       <MapViewer featureId={featureId} />

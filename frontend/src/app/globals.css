@@ -66,7 +66,7 @@
   --primary-b: rgb(115, 132, 139);
   --primary-c: rgb(77, 92, 97);
   --primary-foreground: rgb(255, 255, 255);
-  --secondary: rgb(69, 69, 69);
+  --secondary: rgb(31, 31, 31);
   --secondary-foreground: rgb(251, 251, 251);
   --muted: rgb(69, 69, 69);
   --muted-foreground: rgb(142, 142, 142);
@@ -161,4 +161,17 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;             /* Chrome, Safari, Opera */
+}
+
+.rf-dark {
+  fill: #222;
+  color: #eee !important;
+  background: #222 !important;
+  border-color: #444 !important;
+}
+.rf-light {
+  fill: #fff;
+  color: #222 !important;
+  background: #fff !important;
+  border-color: #ccc !important;
 }
