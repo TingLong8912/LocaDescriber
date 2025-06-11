@@ -27,7 +27,7 @@ export default function ThesisDetails() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <div className="mx-auto h-auto px-20 py-30 space-y-4 text-foreground bg-secondary">

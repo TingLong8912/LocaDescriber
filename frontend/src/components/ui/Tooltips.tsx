@@ -9,15 +9,17 @@ export function TooltipDemo({ children, tooltip }: { children: React.ReactNode; 
         <Tooltip.Trigger asChild>
           {children}
         </Tooltip.Trigger>
-        <Tooltip.Content
-          side="top"
-          align="center"
-          sideOffset={8}
-          className="px-3 py-1.5 rounded-md bg-gray-900 text-white text-sm shadow-md"
-        >
-          {tooltip}
-          <Tooltip.Arrow className="fill-gray-900" />
-        </Tooltip.Content>
+        <Tooltip.Portal>
+          <Tooltip.Content
+            side="top"
+            align="center"
+            sideOffset={8}
+            className="px-3 py-1.5 rounded-md bg-foreground text-background text-sm shadow-md"
+          >
+            {tooltip}
+            <Tooltip.Arrow className="fill-foreground" />
+          </Tooltip.Content>
+        </Tooltip.Portal>
       </Tooltip.Root>
     </Tooltip.Provider>
   );

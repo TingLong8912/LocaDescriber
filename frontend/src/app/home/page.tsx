@@ -7,6 +7,7 @@ import CaseGrid from "@/components/layout/CaseGrid";
 import ThesisDetails from "@/components/layout/ThesisDetails";
 import FadeInSection from '@/components/ui/FadeInSection';
 import TextCardSlider from '@/components/layout/TextCardSlider';
+import ReverseGeocoding from '@/components/layout/ReverseGeocoding';
 
 export default function HomePage() {
   return (
@@ -19,6 +20,9 @@ export default function HomePage() {
       </FadeInSection>
       <FadeInSection>
         <ThesisDetails />
+      </FadeInSection>
+      <FadeInSection>
+        <ReverseGeocoding />
       </FadeInSection>
       <FadeInSection>
         <TextCardSlider />

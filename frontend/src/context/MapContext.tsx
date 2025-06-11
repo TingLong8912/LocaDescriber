@@ -9,6 +9,8 @@ interface MapContextType {
   setMap: (map: Map) => void;
   isDrawing: boolean;
   setIsDrawing: (val: boolean) => void;
+  context: string;
+  setContext: (val: string) => void;
 }
 
 const MapContext = createContext<MapContextType | undefined>(undefined);
@@ -16,9 +18,10 @@ const MapContext = createContext<MapContextType | undefined>(undefined);
 export const MapProvider = ({ children }: { children: ReactNode }) => {
   const [map, setMap] = useState<Map | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [context, setContext] = useState<string>("Traffic");
 
   return (
-    <MapContext.Provider value={{ map, setMap, isDrawing, setIsDrawing }}>
+    <MapContext.Provider value={{ map, setMap, isDrawing, setIsDrawing, context, setContext }}>
       {children}
     </MapContext.Provider>
   );

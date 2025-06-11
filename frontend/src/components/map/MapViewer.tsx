@@ -22,13 +22,13 @@ import { defaults as defaultInteractions } from "ol/interaction";
 import { useRunStreamingLocationDescription } from "@/hooks/useRunStreamingLocationDescription";
 
 export const MapViewer = ({ featureId }: { featureId?: string }) => {
-  const [context, setContext] = useState<string>("Traffic"); // Example context state
   const [geojson, setGeojson] = useState<JSON | null>(null);
   const [hovered, setHovered] = useState(false);
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapObjectRef = useRef<Map | null>(null);
   const { setMap } = useMapContext();
   const layerRefs = useRef<{ [key: string]: VectorLayer<any> }>({});
+  const { context } = useMapContext();
 
   useRunStreamingLocationDescription(geojson, context);
   
@@ -40,14 +40,6 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
       console.log("MapViewer mounted with featureId:", featureId);
       console.log("GeoJSON data:", geojson);
       console.log("Current context:", context);
-
-      // const fetchFeatureDescription = async () => {
-      //   const lon = 121;
-      //   const lat = 24;
-      //   const res = await getLocationDescription(geojson, context);
-      //   console.log("FeatureId-based description:", res);
-      // };
-      // fetchFeatureDescription();
     } catch (error) {
       console.error(`Error loading GeoJSON for featureId "${featureId}":`, error);
     }
@@ -164,8 +156,6 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
         ) : (
           <>
             <ContextLayerSwitcher
-              context={context}
-              setContext={setContext}
               onChangeLayer={(layerId) => {
                 Object.entries(layerRefs.current).forEach(([key, layer]) => {
                   layer.setVisible(key === layerId);

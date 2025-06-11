@@ -1,8 +1,10 @@
-import { useState, ReactElement } from "react";
+import { useState, ReactElement, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as Select from "@radix-ui/react-select";
 import { Car, CloudRainWind, Dam, SquareActivity, Waves } from "lucide-react";
 import { TooltipDemo } from "@/components/ui/Tooltips";
+import { useProgress } from "@/context/ProgressContext";
+import { useMapContext } from "@/context/MapContext";
 
 // Vector layers available for switching
 const vectorLayers = [
@@ -14,17 +16,17 @@ const vectorLayers = [
 ];
 
 interface ContextLayerSwitcherProps {
-  context: string;
-  setContext: React.Dispatch<React.SetStateAction<string>>;
   onChangeLayer: (layerId: string) => void;
 }
 
-export default function ContextLayerSwitcher({ context, setContext, onChangeLayer }: ContextLayerSwitcherProps) {
+export default function ContextLayerSwitcher({ onChangeLayer }: { onChangeLayer: (layerId: string) => void }) {
+  const { context, setContext } = useMapContext();
   const [selectedIndex, setSelectedIndex] = useState(() => {
     const initialIndex = vectorLayers.findIndex((layer) => layer.id === context);
     return initialIndex !== -1 ? initialIndex : 0;
   });
   const selectedIcon = vectorLayers[selectedIndex].icon;
+  const { progressStatus } = useProgress();
 
   const cycleLayer = () => {
     const nextIndex = (selectedIndex + 1) % vectorLayers.length;
@@ -38,7 +40,8 @@ export default function ContextLayerSwitcher({ context, setContext, onChangeLaye
     <Select.Root>
       <Select.Trigger
         onClick={cycleLayer}
-        className="bg-primary text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md"
+        disabled={progressStatus === "running"}
+        className={`bg-primary text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md ${progressStatus === "running" ? "cursor-not-allowed opacity-50" : ""}`}
       >
         <AnimatePresence mode="wait">
           <TooltipDemo tooltip={vectorLayers[selectedIndex].label}>

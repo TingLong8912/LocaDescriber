@@ -65,6 +65,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
 
       draw.on('drawend', (event) => {
         drawSource.clear();
+        setPendingFeature(null);
         const geometry = event.feature.getGeometry();
         setPendingFeature(event.feature);
         if (onDrawEnd) {
@@ -121,8 +122,8 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
         <Select.Trigger
           onClick={cycleDrawType}
           disabled={progressStatus === "running"}
-          className={`bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md ${progressStatus === "running" ? "cursor-not-allowed opacity-50" : ""
-            }`}
+          className={`bg-primary-a text-primary-foreground w-12 h-12 flex items-center justify-center rounded-md 
+            ${progressStatus === "running" ? "cursor-not-allowed opacity-50" : ""}`}
         >
           <AnimatePresence mode="wait">
             <TooltipDemo tooltip={selected ? selected.label : "Select Draw Type"}>
