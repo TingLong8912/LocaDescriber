@@ -79,7 +79,7 @@ export default function CaseGrid() {
           <button
             key={c.id}
             onClick={() => setActiveCardId(c.id)}
-            className={`w-5 h-5 rounded-full ${activeCardId === c.id ? "bg-primary" : "bg-muted"}`}
+            className={`w-4 h-4 rounded-full ${activeCardId === c.id ? "bg-primary" : "bg-border"}`}
           />
         ))}
       </div>

@@ -18,13 +18,13 @@ export const createFrameLayer = (map: Map) => {
     style: (feature) =>
       new Style({
         stroke: new Stroke({
-          color: "rgba(22,22,22,0.2)",
+          color: "rgba(113, 113, 113, 0.2)",
           width: 2,
         }),
         text: new Text({
           text: "Study Area",
           font: "20px Calibri,sans-serif",
-          fill: new Fill({ color: "rgba(22,22,22,0.2)" }),
+          fill: new Fill({ color: "rgba(108, 108, 108, 0.2)" }),
           offsetY: -15,
         }),
       }),

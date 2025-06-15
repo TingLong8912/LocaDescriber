@@ -4,8 +4,8 @@ import { fetchEventSource } from '@microsoft/fetch-event-source'
 import { useProgress, StepState } from "@/context/ProgressContext"
 import { Toast } from "@/components/ui/UseToast"
 
-// const API_BASE_URL = 'https://geospatialdescription.sgis.tw/api'
-const API_BASE_URL = 'http://localhost:8000/api'
+const API_BASE_URL = 'https://geospatialdescription.sgis.tw/api'
+// const API_BASE_URL = 'http://localhost:8000/api'
 
 // Old API endpoint for non-streaming requests
 export const getLocationDescription = async (geojson: JSON, context: string) => {

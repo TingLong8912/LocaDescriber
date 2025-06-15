@@ -101,7 +101,7 @@ export default function TextCardSlider() {
           <button
             key={c.id}
             onClick={() => setActiveCardId(c.id)}
-            className={`w-5 h-5 rounded-full transition-all duration-200 ${activeCardId === c.id ? "bg-primary" : "bg-muted"
+            className={`w-4 h-4 rounded-full transition-all duration-200 ${activeCardId === c.id ? "bg-primary" : "bg-border"
               }`}
             aria-label={`切換到${c.title}`}
           />
