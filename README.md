@@ -47,8 +47,8 @@ to produce **context-aware**, **referent-sensitive** semantic location descripti
 
 ### Back-end
 
-- **Flask** – [semantic reasoning API (Python)](https://github.com/TingLong8912/spatial-operations.git)
-- **Node.js** – [spatial relation API (JavaScript)](https://github.com/TingLong8912/ontology-based-reverse-geocoding.git)
+- **Flask** – [semantic reasoning API (Python)](https://github.com/TingLong8912/ontology-based-reverse-geocoding.git)
+- **Node.js** – [spatial relation API (JavaScript)](https://github.com/TingLong8912/spatial-operations.git)
 - **PostgreSQL** – geospatial data storage
 - **Turf.js** – spatial operations
 
