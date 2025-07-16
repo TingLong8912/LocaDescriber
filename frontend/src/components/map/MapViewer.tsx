@@ -54,7 +54,7 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
           center: fromLonLat([121, 24]),
           zoom: 9,
           projection: "EPSG:3857",
-          extent: getFrameExtent(),
+          // extent: getFrameExtent(),
         }),
         interactions: defaultInteractions({
           dragPan: !featureId,

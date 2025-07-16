@@ -1,7 +1,6 @@
 // src/lib/api.ts
 import axios from 'axios'
 import { fetchEventSource } from '@microsoft/fetch-event-source'
-import { useProgress, StepState } from "@/context/ProgressContext"
 import { Toast } from "@/components/ui/UseToast"
 
 const API_BASE_URL = 'https://geospatialdescription.sgis.tw/api'
@@ -51,6 +50,7 @@ export const streamLocationDescription = async (
       onopen: async (response: Response) => {
         console.log('SSE connection opened (fetch-event-source)', response)
       },
+      openWhenHidden: true,
       onmessage(msg) {
         if (msg.event === 'error') {
           console.error('[SSE] error event received:', msg.data)

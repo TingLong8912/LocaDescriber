@@ -7,9 +7,10 @@ import { streamLocationDescription } from "@/lib/api";
 export function useRunStreamingLocationDescription(geojson: JSON | null, context: string) {
   const { setSteps, setProgressStatus } = useProgress();
   const [templateData, setTemplateData] = useState<any | null>(null);
-
+  
   useEffect(() => {
-    if (!geojson || !context) return;
+    console.log("useEffect 執行，geojson:", geojson, "context:", context);
+    if (!geojson || !context ) return;
 
     const stepLabels = [
       "Request received",

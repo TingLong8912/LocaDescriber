@@ -37,8 +37,7 @@ const geometryOptions = [
 export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void }) => {
   const { map, setIsDrawing } = useMapContext();
   const { steps, progressStatus } = useProgress();
-  const templateStep = steps.find((s) => s.label === "Template generation");
-  const templateData = templateStep?.details ? JSON.parse(templateStep.details) : null;
+  const [templateData, setTemplateData] = useState(null);
   const [pendingFeature, setPendingFeature] = useState<any | null>(null);
   const [drawType, setDrawType] = useState<GeometryType>("None");
 
@@ -46,6 +45,11 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
   const [showGeoJSONModal, setShowGeoJSONModal] = useState(false);
 
   const isCustomType = (type: GeometryType) => type === "Text" || type === "GeoJSON";
+
+  useEffect(() => {
+    const templateStep = steps.find((s) => s.label === "Template generation");
+    setTemplateData(templateStep?.details ? JSON.parse(templateStep.details): null);
+  }, [steps]);
 
   useEffect(() => {
     if (!map) return;
@@ -66,6 +70,7 @@ export const DrawTool = ({ onDrawEnd }: { onDrawEnd?: (geometry: any) => void })
       draw.on('drawend', (event) => {
         drawSource.clear();
         setPendingFeature(null);
+        setTemplateData(null);
         const geometry = event.feature.getGeometry();
         setPendingFeature(event.feature);
         if (onDrawEnd) {
