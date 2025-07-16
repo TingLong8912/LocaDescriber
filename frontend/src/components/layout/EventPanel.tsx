@@ -7,8 +7,8 @@ import { CheckCheck, CircleDashed, LoaderCircle } from 'lucide-react';
 import { useProgress } from '@/context/ProgressContext';
 import { useMapContext } from '@/context/MapContext';
 import { GeoJSON } from 'ol/format';
-import VectorLayer from 'ol/layer/Vector';
-import VectorSource from 'ol/source/Vector';
+import { Vector } from 'ol/layer';
+import { Vector as VectorSource } from 'ol/source';
 
 export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
@@ -78,7 +78,7 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
     const layers = map.getLayers().getArray();
     const drawLayer = layers.find(
       layer => layer.get('name') === 'drawLayer'
-    );
+    ) as any | undefined;
 
     if (drawLayer) {
       const features = drawLayer.getSource().getFeatures();
