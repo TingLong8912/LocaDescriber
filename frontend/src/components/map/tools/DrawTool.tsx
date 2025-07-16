@@ -23,6 +23,9 @@ type GeometryType = "Point" | "LineString" | "Polygon" | "Circle" | "Box" | "Tex
 const drawSource = new VectorSource();
 const drawLayer = new VectorLayer({
   source: drawSource,
+  properties: {
+    "name": "drawLayer"
+  }
 });
 
 const geometryOptions = [

@@ -5,6 +5,10 @@ import React, { useState } from 'react';
 import ProgressItem from '@/components/ui/ProgressItem';
 import { CheckCheck, CircleDashed, LoaderCircle } from 'lucide-react';
 import { useProgress } from '@/context/ProgressContext';
+import { useMapContext } from '@/context/MapContext';
+import { GeoJSON } from 'ol/format';
+import VectorLayer from 'ol/layer/Vector';
+import VectorSource from 'ol/source/Vector';
 
 export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
@@ -40,6 +44,7 @@ export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
 function SidebarContent({ onClose }: { onClose: () => void }) {
   const { steps } = useProgress();
+  const { map } = useMapContext(); // 假設 context 中提供 map
   const lastStep = steps.length > 0 ? steps[steps.length - 1] : undefined;
   let multiLocadResults: string[] = [];
   if (lastStep?.details) {
@@ -57,11 +62,32 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
   const finalResult = multiLocadResults[resultIndex] || "";
 
   const [copied, setCopied] = useState(false);
+  const [outputGeoJSON, setOutputGeoJSON] = useState(false);
+
   const handleCopy = () => {
     if (finalResult) {
       navigator.clipboard.writeText(finalResult);
       setCopied(true);
       setTimeout(() => setCopied(false), 1200);
+    }
+  };
+
+  const handleOutputGeoJSON = () => {
+    if (!map) return;
+
+    const layers = map.getLayers().getArray();
+    const drawLayer = layers.find(
+      layer => layer.get('name') === 'drawLayer'
+    );
+
+    if (drawLayer) {
+      const features = drawLayer.getSource().getFeatures();
+      const geojson = new GeoJSON().writeFeatures(features, {
+        featureProjection: map.getView().getProjection(),
+      });
+      navigator.clipboard.writeText(geojson);
+      setOutputGeoJSON(true);
+      setTimeout(() => setOutputGeoJSON(false), 1200);
     }
   };
 
@@ -103,10 +129,16 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
           <pre className="p-2 whitespace-pre-wrap text-lg max-h-40 overflow-auto">{finalResult}</pre>
           <div>
             <button
-              className="text-xs px-2 py-1 rounded bg-muted-foreground text-muted hover:bg-primary/80"
+              className="text-xs px-2 py-1 rounded bg-muted-foreground text-muted hover:bg-primary/80 mr-1"
               onClick={handleCopy}
             >
-              {copied ? "Copied!" : "Copy"}
+              {copied ? "Copied!" : "LocD"}
+            </button>
+            <button
+              className="text-xs px-2 py-1 rounded bg-muted-foreground text-muted hover:bg-primary/80"
+              onClick={handleOutputGeoJSON}
+            >
+              {outputGeoJSON ? "Copied!" : "GeoJSON"}
             </button>
           </div>
         </div>
