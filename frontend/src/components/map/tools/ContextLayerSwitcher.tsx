@@ -17,9 +17,10 @@ const vectorLayers = [
 
 interface ContextLayerSwitcherProps {
   onChangeLayer: (layerId: string) => void;
+  setGeojson: React.Dispatch<React.SetStateAction<any>>; 
 }
 
-export default function ContextLayerSwitcher({ onChangeLayer }: { onChangeLayer: (layerId: string) => void }) {
+export default function ContextLayerSwitcher({ onChangeLayer, setGeojson }: ContextLayerSwitcherProps) {
   const { context, setContext } = useMapContext();
   const [selectedIndex, setSelectedIndex] = useState(() => {
     const initialIndex = vectorLayers.findIndex((layer) => layer.id === context);
@@ -32,6 +33,7 @@ export default function ContextLayerSwitcher({ onChangeLayer }: { onChangeLayer:
     const nextIndex = (selectedIndex + 1) % vectorLayers.length;
     setSelectedIndex(nextIndex);
     const nextContext = vectorLayers[nextIndex].id;
+    setGeojson(null); 
     setContext(nextContext);
     onChangeLayer(nextContext);
   };

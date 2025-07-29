@@ -10,7 +10,7 @@ export function useRunStreamingLocationDescription(geojson: JSON | null, context
   
   useEffect(() => {
     console.log("useEffect 執行，geojson:", geojson, "context:", context);
-    if (!geojson || !context ) return;
+    if (geojson === null || context === "") return;
 
     const stepLabels = [
       "Request received",

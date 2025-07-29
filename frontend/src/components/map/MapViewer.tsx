@@ -22,13 +22,13 @@ import { defaults as defaultInteractions } from "ol/interaction";
 import { useRunStreamingLocationDescription } from "@/hooks/useRunStreamingLocationDescription";
 
 export const MapViewer = ({ featureId }: { featureId?: string }) => {
+  const { context } = useMapContext();
   const [geojson, setGeojson] = useState<JSON | null>(null);
   const [hovered, setHovered] = useState(false);
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapObjectRef = useRef<Map | null>(null);
   const { setMap } = useMapContext();
   const layerRefs = useRef<{ [key: string]: VectorLayer<any> }>({});
-  const { context } = useMapContext();
 
   useRunStreamingLocationDescription(geojson, context);
   
@@ -91,9 +91,6 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
   }, []);
 
   const handleDrawEnd = async (geometry: any) => {
-    console.log("Draw finished:", geometry);
-    console.log("Context:", context);
-
     const geojsonObj = new GeoJSON().writeFeatureObject(new Feature({ geometry }));
 
     // Convert coordinates to EPSG:4326 for Point, LineString, Polygon
@@ -161,11 +158,12 @@ export const MapViewer = ({ featureId }: { featureId?: string }) => {
                   layer.setVisible(key === layerId);
                 });
               }}
+              setGeojson={setGeojson}
             />
             <DrawTool onDrawEnd={handleDrawEnd} />
           </>
         )}
-        <PopupTool />
+        {/* <PopupTool /> */}
       </ToolContainer>
     </>
   );
