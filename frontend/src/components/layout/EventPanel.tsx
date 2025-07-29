@@ -10,35 +10,70 @@ import { GeoJSON } from 'ol/format';
 import { Vector } from 'ol/layer';
 import { Vector as VectorSource } from 'ol/source';
 
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   if (!isOpen) return null;
 
-  return (
-    <>
-      {/* Desktop Sidebar */}
-      <motion.aside
-        key="eventpanel-desktop"
-        initial={{ x: 260, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: 260, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="absolute top-0 right-0 z-30 w-64 h-full border-l bg-background py-4 hidden lg:block"
+  if (isMobile) {
+    return (
+      <SwipeableDrawer
+        anchor="bottom"
+        open={isOpen}
+        onClose={onClose}
+        onOpen={() => {}}
+        swipeAreaWidth={40}
+        disableSwipeToOpen={false}
+        disableDiscovery={false}
+        ModalProps={{
+          keepMounted: true,
+        }}
       >
-        <SidebarContent onClose={onClose} />
-      </motion.aside>
+        <Box
+          sx={{
+            borderTopLeftRadius: 8,
+            borderTopRightRadius: 8,
+            backgroundColor: theme.palette.background.paper,
+            pt: 2,
+          }}
+        >
+          <Box
+            sx={{
+              width: 30,
+              height: 6,
+              backgroundColor: theme.palette.grey[300],
+              borderRadius: 3,
+              mx: 'auto',
+              mb: 1,
+            }}
+          />
+        </Box>
+        <Box sx={{ px: 2, pb: 2, height: '100%', overflow: 'auto' }}>
+          <SidebarContent onClose={onClose} />
+        </Box>
+      </SwipeableDrawer>
+    );
+  }
 
-      {/* Mobile Sidebar */}
-      <motion.div
-        key="eventpanel-mobile"
-        initial={{ x: '100%' }}
-        animate={{ x: 0 }}
-        exit={{ x: '100%' }}
-        transition={{ duration: 0.3 }}
-        className="fixed inset-y-0 right-0 z-40 w-64 bg-background p-4 lg:hidden"
-      >
-        <SidebarContent onClose={onClose} />
-      </motion.div>
-    </>
+  // Desktop Sidebar
+  return (
+    <motion.aside
+      key="eventpanel-desktop"
+      initial={{ x: 260, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 260, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="absolute top-0 right-0 z-30 w-64 h-full border-l bg-background py-4 block"
+    >
+      <SidebarContent onClose={onClose} />
+    </motion.aside>
   );
 }
 

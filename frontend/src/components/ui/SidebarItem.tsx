@@ -31,7 +31,12 @@ export default function SidebarItem({ label, href, icon, actived, onClick }: Sid
         progressStatus === 'running'
           ? undefined
           : onClick
-          ? onClick
+          ? () => {
+              onClick();
+              if (href) {
+                window.location.href = href;
+              }
+            }
           : () => href && (window.location.href = href)
       }
     >

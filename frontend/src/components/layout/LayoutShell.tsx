@@ -57,8 +57,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         className={clsx(
           'flex flex-col h-screen transition-all duration-300',
           {
-            'ml-64': isSidebarOpen,
-            'mr-64': showPanel && isEventPanelOpen,
+            'lg:ml-64': isSidebarOpen,
+            'lg:mr-64': showPanel && isEventPanelOpen,
           }
         )}
       >
@@ -68,7 +68,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
           isEventPanelOpen={isEventPanelOpen}
           setIsEventPanelOpen={setIsEventPanelOpen}
         />
-        <main className="flex-grow h-full w-full overflow-hidden">
+        <main className="flex-grow h-full w-full overflow-y-auto lg:overflow-hidden">
           {children}
         </main>
       </div>

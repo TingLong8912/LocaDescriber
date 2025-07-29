@@ -45,9 +45,9 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
   return (
     <>
       <ul className="space-y-2">
-        <SidebarItem label="Home" href="/home" icon={<Home className='h-5 w-5 mr-2' />} />
-        <SidebarItem label="Map" href="/map" icon={<Map className='h-5 w-5 mr-2' />} /> 
-        <SidebarItem label="Ontology" href="/ontology" icon={<Circle className='h-5 w-5 mr-2' />} />
+        <SidebarItem label="Home" href="/home" icon={<Home className='h-5 w-5 mr-2' />} onClick={onClose} />
+        <SidebarItem label="Map" href="/map" icon={<Map className='h-5 w-5 mr-2' />} onClick={onClose} />
+        <SidebarItem label="Ontology" href="/ontology" icon={<Circle className='h-5 w-5 mr-2' />} onClick={onClose} />
       </ul>
     </>
   );
