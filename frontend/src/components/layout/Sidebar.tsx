@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SidebarItem from '@/components/ui/SidebarItem';
-import { Home, Map, Circle } from 'lucide-react';
+import { Home, Map, Circle, X } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -44,6 +44,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 function SidebarContent({ onClose }: { onClose: () => void }) {
   return (
     <>
+      <div onClick={onClose} className="flex justify-end">
+        <X className="cursor-pointer" />
+      </div>
       <ul className="space-y-2">
         <SidebarItem label="Home" href="/home" icon={<Home className='h-5 w-5 mr-2' />} onClick={onClose} />
         <SidebarItem label="Map" href="/map" icon={<Map className='h-5 w-5 mr-2' />} onClick={onClose} />

@@ -15,6 +15,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { X } from 'lucide-react';
 
 export function EventPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const theme = useTheme();
@@ -130,6 +131,9 @@ function SidebarContent({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="flex flex-col h-full overflow-y-auto">
+      <div onClick={onClose} className="flex justify-end px-3">
+        <X className="cursor-pointer sm:block hidden" />
+      </div>
       <span className="text-md h-11 px-3 font-semibold flex items-end">Processing Steps</span>
       <div className="flex flex-col items-stretch">
         {steps.map((step, i) => (
